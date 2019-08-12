@@ -236,18 +236,17 @@ section.carrossel {
     justify-content: center;
 }
 
-.text-video h1{
+.text-box h1{
     color: white;
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text-video p{
+.text-box p{
     color: white;
 }
-
-
-/*------ botões do carrosel -------*/
+  
+/*------ botões de next and prev do carrosel -------*/
 
 .prev, .next{
     cursor: pointer;
@@ -274,6 +273,35 @@ section.carrossel {
 .prev:hover, .next:hover{
     background-color: rgba(0,0,0,0.8);
 }
+
+/* --------------- botões da horizontal ----------------*/
+
+.navegation{
+    position: absolute;
+    left: 50%;
+    bottom: -115%;  /*---- isso é gambiarra ----*/
+    transform: translate(-50%);
+    display: flex;
+  
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 45px;
+    margin: 5px;
+    background-color: #bbb;
+    /* display: inline-block; */
+    transition: background-color 0.6s ease;
+  }
+
+.dot:hover {
+    background-color: #717171;
+  }
+
+
+
+
 
 /* .carrossel .form {
     display: flex;
