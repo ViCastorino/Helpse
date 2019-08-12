@@ -93,7 +93,6 @@ header {
     background-image: url('../img/44.svg');
     background-repeat: no-repeat;
     background-position-x: center;
-
     background-position-y: 220px;
     grid-area: header;
     display: flex;
@@ -226,17 +225,57 @@ div.items img {
 }
 
 
-/* -----------------------------------------------------------SECTION CONTATO----------------------------------------------------- */
+/* -----------------------------------------------------------SECTION CARROSEL ----------------------------------------------------- */
 
 section.carrossel {
-    background-color: #5243A9;
     grid-area: scdSection;
+    background: #3A1A53;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
 }
 
-.carrossel .form {
+.text-video h1{
+    color: white;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-video p{
+    color: white;
+}
+
+
+/*------ botões do carrosel -------*/
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 2;
+}
+
+.next{
+    right: 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* .carrossel .form {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -247,24 +286,24 @@ button {
     display: inline;
     height: 50px;
     border: none;
-}
+} */
 
-.carrossel input {
+/* .carrossel input {
     outline-color: #27ae60;
     border-radius: 10px 0px 0px 10px;
     padding-left: 25px;
     margin: 0;
     width: 250px;
-}
+} */
 
-.carrossel button {
+/* .carrossel button {
     cursor: pointer;
     width: 100px;
     margin-left: -10px;
     border-radius: 0px 10px 10px 0px;
     background-color: #27ae60;
     color: black;
-}
+} */
 
 
 
