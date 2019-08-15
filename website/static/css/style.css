@@ -62,6 +62,7 @@ nav li:hover,
 }
 
 /* botões primarios: submit e login  */
+
 .primary {
     background: #9D5BB2;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
@@ -432,7 +433,7 @@ footer .footer-card {
 
 .login {
     animation: login .3s;
-    background-color: #ffffffd0;
+    background-color:white;
     font-family: sans-serif;
     color: #3a1a53;
     width: 60%;
@@ -477,6 +478,8 @@ footer .footer-card {
     cursor: pointer;
 }
 
+
+/* coloca shadow nas caixas de texto */
 #modal input {
     height: 30px;
     box-shadow: 1px 1px 1px 2px #3333333b;
