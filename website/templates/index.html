@@ -10,7 +10,7 @@
         <ul>
             <li><a id="link-inicio" href="/"> inicio </a> </li>
             <li><a id="link-sobre"> sobre nós</a> </li>
-            <li><a id="link-outro"> levar p carrossel</a> </li>
+            <li><a id="link-carrossel"> levar p carrossel</a> </li>
 
             <div class="buttons">
                 <a href="cadastro"><button class="primary">cadastre-se</button></a>
@@ -21,8 +21,12 @@
 
     <header>
         <div class="info-content">
-            <h1>titulo de um site sobre etc etc </h1>
-            <p>A great new free psd theme to showcase your new aplication.</p>
+            <h1>encontre tanana tananaa </h1>
+            <p>{{msg}} </p>
+            {% if logado%}
+            <!-- exibir uma nav diferente -->
+                está logado
+            {% endif %}
             <form class="search-bar" action="/agendar">
                 {% csrf_token %}
                 <input class="text input" name=`search-bar` type="text" name="" id="" placeholder="onde você está?">
@@ -226,7 +230,7 @@
                     <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
                     <p>Digite sua senha:</p>
                     <input type="password">
-                    <p></p>
+                    <p class="msg"> {{msg}}</p>
                     <input class="entrarbtn" type="button" value="Entrar  ">
                 </form>
             </div>
