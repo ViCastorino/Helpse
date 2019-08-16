@@ -3,11 +3,14 @@
 
 body {
     background-color: #fff;
-    background-color: white;
     display: grid;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
-    grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''footer footer footer footer';
+    grid-template-areas: 'nav nav nav nav'
+                         'header header header header '
+                         'fstSection fstSection fstSection fstSection'
+                         'scdSection scdSection scdSection scdSection '
+                         'footer footer footer footer';
     grid-template-rows: 10vh 90vh 60vh 60vh 40vh;
 }
 
@@ -175,7 +178,7 @@ header .info-content {
 
 
 header input {
-    display: inline;
+    display: inline-block;
     height: 50px;
     outline: none;
 }
@@ -350,8 +353,7 @@ button {
     transition: 1s;
 }
 
-footer,
-footer h2,
+/* footer h2,
 footer h3 {
     color: white;
 }
@@ -367,21 +369,22 @@ footer h3 {
 footer li a:hover {
     transition: 1s;
     color: #ff6b6b;
-}
+} */
 
 footer {
-    background-color: #3d3d3d;
+    background-color: #ff6b6b;
     grid-area: footer;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    flex-direction: row;
 }
-
+/* 
 footer .footer-card {
-    border-right: 1px solid rgb(66, 66, 66);
-    padding: 0 20px;
-}
+    /* border-right: 1px solid rgb(66, 66, 66); */
+    /* padding: 0 20px;
+} */
 
 
 .label {
@@ -583,9 +586,6 @@ footer .footer-card {
 
     /* ----------------------------------------------------------------- */
 
-    footer {
-        flex-direction: column-reverse;
-    }
 
     footer .footer-card {
         border: none;
