@@ -8,7 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
     grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''footer footer footer footer';
-    grid-template-rows: 10vh 90vh 60vh 60vh 40vh;
+    grid-template-rows: 10vh 90vh 90vh 70vh 40vh;
 }
 
 /* formatar logo aqui */
@@ -196,15 +196,16 @@ header input[type=submit] {
 /* -----------------------------------------------------------SECTION SOBRE----------------------------------------------------- */
 
 section.sobre {
-    text-align: center;
     grid-area: fstSection;
     display: flex;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
 }
 
 /* O que segura os itens da section sobre */
+
 div.sobre-content {
     display: flex;
     align-items: center;
@@ -213,8 +214,7 @@ div.sobre-content {
 
 /* Os cards da section sobre */
 div.items {
-    padding: 15px;
-
+    padding: 16px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -222,7 +222,6 @@ div.items {
 
 div.items img {
     height: 60px;
-
 }
 
 
@@ -292,7 +291,6 @@ section.carrossel {
     width: 45px;
     margin: 5px;
     background-color: #bbb;
-    /* display: inline-block; */
     transition: background-color 0.6s ease;
   }
 
@@ -302,43 +300,7 @@ section.carrossel {
 
 
 
-
-
-/* .carrossel .form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.carrossel input,
-button {
-    display: inline;
-    height: 50px;
-    border: none;
-} */
-
-/* .carrossel input {
-    outline-color: #27ae60;
-    border-radius: 10px 0px 0px 10px;
-    padding-left: 25px;
-    margin: 0;
-    width: 250px;
-} */
-
-/* .carrossel button {
-    cursor: pointer;
-    width: 100px;
-    margin-left: -10px;
-    border-radius: 0px 10px 10px 0px;
-    background-color: #27ae60;
-    color: black;
-} */
-
-
-
-
-
-/* -----------------------------------------------------------FOOTER----------------------------------------------------- */
+  /* -----------------------------------------------------------FOOTER----------------------------------------------------- */
 .social {
     display: flex;
     justify-content: space-between;

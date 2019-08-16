@@ -105,34 +105,54 @@
     <!---------SECTION SOBRE O PROJETO ---------->
 
     <section class="sobre">
-        <h2>um pouco sobre nós</h2>
+        <!-- <h2>um pouco sobre nós</h2> -->
         <div class="sobre-content">
             <div class="items">
-                <img src="{% static 'img/video-call.svg' %}" alt="">
+                <img src="{% static 'img/icons/video-call.svg' %}" alt="">
                 <h2>Editable Theme</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <hr>
             <div class="items">
-                <img src="{% static 'img/heart.svg' %}" alt="">
+                <img src="{% static 'img/icons/heart.svg' %}" alt="">
                 <h2>Flat Design</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <hr>
             <div class="items">
-                <img src="{% static 'img/map-location.svg' %}" alt="">
+                <img src="{% static 'img/icons/map-location.svg' %}" alt="">
                 <h2>Reach your audience</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <hr>
         </div>
+        <div class="sobre-content">
+            <div class="items">
+                <img src="{% static 'img/icons/icon_custo.png' %}" alt="">
+                <h2>Editable Theme</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <hr>
+            <div class="items">
+                <img src="{% static 'img/icons/heart.svg' %}" alt="">
+                <h2>Flat Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <hr>
+            <div class="items">
+                <img src="{% static 'img/icons/map-location.svg' %}" alt="">
+                <h2>Reach your audience</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <hr>
+            
+        </div>
     </section>
 
 
-    <!-- SECTION DO CARROSSEL -->
+    <!--------------------- SECTION DO CARROSSEL ------------------------->
 
-    <section class="carrossel" id="2">
-
+<section class="carrossel" id="2">
         <div class="text-box">
             <h1> OK, thi is a start </h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque fugiat dicta natus minima iusto
@@ -171,7 +191,7 @@
                 <span class="dot" onclick="currentSlide(3)"></span> 
                 <span class="dot" onclick="currentSlide(4)"></span> 
               </div>
-    </section>
+    </section> 
 
 
     <!---------- FOOTER ------------>
@@ -211,11 +231,7 @@
                 <li><a href="#">lorem etc </a></li>
             </ul>
         </div>
-    </footer>
-
-
-    <!----------------- LOGIN ----------------->
-
+        <footer></footer>
         <div id="modal" class="login-container">
             <div class="login">
                 <button class="btnfechar">x</button>
@@ -233,5 +249,4 @@
 
         </div>
 </body>
-
 {% endblock %}
