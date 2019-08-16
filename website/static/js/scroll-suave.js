@@ -28,9 +28,9 @@
       smoothScroll('.sobre', 1000)
     }, false)
 
-  document.getElementById('link-outro').addEventListener('click',
+  document.getElementById('link-carrossel').addEventListener('click',
     function () {
-      smoothScroll('.contact', 1000)
+      smoothScroll('.carrossel', 1000)
     }, false)
 
   document.getElementById('link-inicio').addEventListener('click',

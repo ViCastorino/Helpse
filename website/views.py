@@ -16,7 +16,7 @@ def agendar(request):
 
 # função de cadastrar cliente
 def cadastro(request):
-     contexto= {}
+     contexto = {}
      if request.method == 'POST':
           paciente = Paciente()
 
@@ -42,15 +42,15 @@ def cadastro(request):
                print(paciente)
                paciente.save()
                print(paciente)
-               contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :) '}
+               contexto= {'msg':f'Boas vindas, {paciente.nome}! Aproveite o site :)','logado':True}
                print(f'{paciente.nome} foi cadastrado')
-               return  render(request, 'login.html', contexto)
+               return  render(request, 'index.html', contexto)
 
           else:
-               contexto = {'msg':f'Parece que este email já está sendo utilizado :('}
+               contexto_false = {'msg':f'Parece que este email já está sendo utilizado :(', 'logado':False}
                print('error')
-               return render(request, 'cadastro.html', contexto)
-     return render(request, 'cadastro.html', {})
+               return render(request, 'cadastro.html', contexto_false)
+     return render(request, 'cadastro.html', contexto)
 
 #função de cadastrar as instituições
 def cadastro_instituicao(request):
@@ -77,6 +77,6 @@ def cadastro_instituicao(request):
                return  render(request, 'login.html', contexto)
           else:
                contexto= {'msg':f'Ooops, parece que já cadastraram esse email'}
-               return  render(request, 'login.html', contexto)
+               return  render(request, 'cadastro.html', contexto)
      return render( request, 'index.html', contexto)
 
