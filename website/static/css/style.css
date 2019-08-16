@@ -214,7 +214,7 @@ div.sobre-content {
 
 /* Os cards da section sobre */
 div.items {
-    padding: 16px;
+    padding: 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -245,6 +245,7 @@ section.carrossel {
 .text-box p{
     color: white;
 }
+
   
 /*------ botões de next and prev do carrosel -------*/
 
@@ -277,17 +278,15 @@ section.carrossel {
 /* --------------- botões da horizontal ----------------*/
 
 .navegation{
-    position: absolute;
-    left: 50%;
-    bottom: -115%;  /*---- isso é gambiarra ----*/
-    transform: translate(-50%);
     display: flex;
-  
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
 }
 
 .dot {
     cursor: pointer;
-    height: 15px;
+    height: 10px;
     width: 45px;
     margin: 5px;
     background-color: #bbb;
