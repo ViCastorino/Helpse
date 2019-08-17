@@ -369,7 +369,7 @@ div.items img {
 .p-login {
     background: -webkit-linear-gradient(left, #9D5BB2, #EF698C);
     background: linear-gradient(to right, #9D5BB2, #EF698C);
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Roboto Slab', serif;
     font-size:20pt;
     text-align: center;
     -webkit-background-clip: text;

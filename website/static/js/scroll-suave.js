@@ -9,7 +9,6 @@
 
   function iniciarLogin() {
     login.classList.add('mostrar');
-    console.log('ok baby');
   }
 
   function fecharLogin() {

@@ -9,8 +9,8 @@
         <span class="logo"> logo bonitão </span>
         <ul>
             <li><a id="link-inicio" href="/"> inicio </a> </li>
-            <li><a id="link-sobre"> sobre nós</a> </li>
-            <li><a id="link-carrossel"> levar p carrossel</a> </li>
+            <li><a id="link-sobre" href="/sobre"> sobre nós</a> </li>
+            <li><a id="link-carrossel"> Vantagens</a> </li>
 
             {% if logado %}
             <div class="buttons">
@@ -261,7 +261,6 @@
         </div>
     </div>
     {% if modal_ativo %}
-    <!-- Esta horrorosa gambiarra é para manter o modal ativo quando alguem falhar no login -->
     <script>
         document.getElementById('modal').classList.add('mostrar');
     </script>

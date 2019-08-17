@@ -7,6 +7,10 @@ def index(request):
     contexto= {}
     return render( request, 'index.html', contexto)
 
+def sobre(request):
+     contexto= {}
+     return render( request, 'sobre.html', contexto)
+
 # Incompleta
 def agendar(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
