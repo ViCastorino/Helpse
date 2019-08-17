@@ -7,8 +7,12 @@ body {
     display: grid;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
-    grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''footer footer footer footer';
-    grid-template-rows: 10vh 90vh 90vh 70vh 40vh;
+    grid-template-areas: 'nav nav nav nav'
+                        'header header header header '
+                        'fstSection fstSection fstSection fstSection'
+                        'scdSection scdSection scdSection scdSection '
+                        'footer footer footer footer';
+    grid-template-rows: 10vh 90vh 90vh 50vh 40vh;
 }
 
 /* formatar logo aqui */
@@ -193,7 +197,7 @@ header input[type=submit] {
     width: 80px;
 }
 
-/* -----------------------------------------------------------SECTION SOBRE----------------------------------------------------- */
+/* ------------------------------------------------ SECTION SOBRE----------------------------------------------------- */
 
 section.sobre {
     grid-area: fstSection;
@@ -213,6 +217,7 @@ div.sobre-content {
 }
 
 /* Os cards da section sobre */
+
 div.items {
     padding: 15px;
     display: flex;
@@ -225,45 +230,48 @@ div.items img {
 }
 
 
-/* -----------------------------------------------------------SECTION CARROSEL ----------------------------------------------------- */
+/* --------------------------------------------- SECTION CARROSEL --------------------------------------------------- */
 
 section.carrossel {
     grid-area: scdSection;
-    background: #3A1A53;
+    background: #5243A9;
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: center; 
+    position: relative;
 }
 
-.text-box h1{
+section.box-text{
+    display: none;
+    /* text-align: center; */
+}
+
+.box-text h2{
     color: white;
-    font-size: 25px;
+    font-size: 17px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text-box p{
-    color: white;
-}
 
-  
-/*------ botões de next and prev do carrosel -------*/
 
-.prev, .next{
+/* style dos prev e next do carrosel */
+
+.prev, .next {
     cursor: pointer;
     position: absolute;
+    top: 50%;
     width: auto;
+    margin-top: -30px;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
     user-select: none;
-    z-index: 2;
 }
 
-.next{
+.next {
     right: 0;
 }
 
@@ -271,36 +279,41 @@ section.carrossel {
     left: 0;
 }
 
-.prev:hover, .next:hover{
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    color: white;
 }
 
-/* --------------- botões da horizontal ----------------*/
+/* syle dos dots horizontais do carrosel */
+
 
 .navegation{
     display: flex;
     position: absolute;
     transform: translate(-50%);
     left: 50%;
+    bottom: 20px;
+
 }
 
-.dot {
+.dot{
     cursor: pointer;
     height: 10px;
-    width: 45px;
-    margin: 5px;
+    width: 35px;
+    margin: 2px;
     background-color: #bbb;
+    display: inline-block;
     transition: background-color 0.6s ease;
   }
 
-.dot:hover {
+.active, .dot:hover {
     background-color: #717171;
   }
 
 
-
   /* -----------------------------------------------------------FOOTER----------------------------------------------------- */
-.social {
+
+  .social {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -350,7 +363,7 @@ footer .footer-card {
     flex-direction: column;
 }
 
-/* ----------------------------------------------login modal */
+/* ----------------------------------------------login modal ----------------------------------------*/
 
 .login-container {
     background-color: #ffffffd0;

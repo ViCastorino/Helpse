@@ -24,4 +24,6 @@ btnorganization.addEventListener('click', function(){
     console.log('clicou2');
 });
 
+
 // função do carrosel ///
+

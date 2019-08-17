@@ -25,7 +25,7 @@
             <p>{{msg}} </p>
             {% if logado%}
             <!-- exibir uma nav diferente -->
-                está logado
+            está logado
             {% endif %}
             <form class="search-bar" action="/agendar">
                 {% csrf_token %}
@@ -106,9 +106,7 @@
         {% endif%}
     </header>
 
-
-    <!---------SECTION SOBRE O PROJETO ---------->
-
+    <!----------------------------- SECTION SOBRE O PROJETO --------------------------->
     <section class="sobre">
         <!-- <h2>um pouco sobre nós</h2> -->
         <div class="sobre-content">
@@ -156,56 +154,46 @@
     </section>
 
 
-    <!--------------------- SECTION DO CARROSSEL ------------------------->
+    <!-------------------------------------- SECTION DO CARROSSEL ----------------------------------------->
 
-    <section class="carrossel" id="2">
-        <div class="text-box">
-            <h1> OK, thi is a start </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque fugiat dicta natus minima iusto
-                labore ut? Tempore perferendis, doloribus unde itaque dolore soluta. Doloribus ratione incidunt fuga
-                odio, consequatur eligendi.</p>
+    <section class="carrossel">
+
+        <div class="box-text">
+            <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, tenetur illo? Veritatis porro ea
+                quod laudantium aut temporibus, error a. </h2>
+
         </div>
 
-        <div class="text-box">
-            <h1> Hi, this is the text one </h1>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem necessitatibus explicabo amet repellat
-                laboriosam cupiditate odio modi quos voluptas. Porro?
-            </p>
-        </div>
-        <div class="text-box">
-                <h1> Hi, this is the text one </h1>
-                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem necessitatibus explicabo amet repellat
-                    laboriosam cupiditate odio modi quos voluptas. Porro?
-                </p>
-            </div>
-
-        <div class="text-box">
-            <h1> uauuu, its a progress </h1>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem necessitatibus explicabo amet repellat
-                laboriosam cupiditate odio modi quos voluptas. Porro?
-            </p>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, deserunt.</h2>
         </div>
 
-        <div class="text-box">
-            <h1> ok, its working </h1>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem necessitatibus explicabo amet repellat
-                laboriosam cupiditate odio modi quos voluptas. Porro?
-            </p>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat ad mollitia? Blanditiis ex odit
+                illum consequuntur adipisci repellendus. <br> Magni quo deserunt id ipsam quos in aliquam ex expedita,
+                architecto quis reiciendis? Porro fugit voluptatum quos at assumenda nihil perspiciatis?</h2>
         </div>
 
-        <!-- <div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(+1)">&#10095;</a>
-            <br>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos aperiam, corporis, pariatur ipsam
+                ab sint harum vel mollitia hic corrupti <br> tempore temporibus a sapiente repellendus dolores commodi animi
+                odio. Ipsa vero voluptates iusto, harum voluptatum ipsum dolor br exercitationem! Culpa tenetur aliquam
+                neque doloremque sapiente dolorem, adipisci excepturi quis error.</h2>
+
         </div>
 
-        <div class="navegation"">
-            <span class=" dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div> -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+
+        <div class="navegation">
+            <label class="dot" onclick="currentSlide(1)"></label>
+            <label class="dot" onclick="currentSlide(2)"></label>
+            <label class="dot" onclick="currentSlide(3)"></label>
+            <label class="dot" onclick="currentSlide(4)"></label>
+        </div>
+
     </section>
+
 
 
     <!---------- FOOTER ------------>
@@ -245,23 +233,26 @@
                 <li><a href="#">lorem etc </a></li>
             </ul>
         </div>
-        <footer></footer>
-        <div id="modal" class="login-container">
-            <div class="login">
-                <button class="btnfechar">x</button>
-                <p class="p-login">Entre</p>
-                <form class="form-login" action="/">
-                    {% csrf_token %}
-                    <p>Digite seu e-mail:</p>
-                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
-                    <p>Digite sua senha:</p>
-                    <input type="password">
-                    <p class="msg"> {{msg}}</p>
-                    <input class="entrarbtn" type="button" value="Entrar  ">
-                </form>
-            </div>
+    </footer>
 
+
+    <!--------------------------------- LOGIN DINÂMICO -------------------------------->
+
+    <div id="modal" class="login-container">
+        <div class="login">
+            <button class="btnfechar">x</button>
+            <p class="p-login">Entre</p>
+            <form class="form-login" action="/">
+                {% csrf_token %}
+                <p>Digite seu e-mail:</p>
+                <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
+                <p>Digite sua senha:</p>
+                <input type="password">
+                <p class="msg"> {{msg}}</p>
+                <input class="entrarbtn" type="button" value="Entrar  ">
+            </form>
         </div>
+    </div>
 </body>
 
 {% endblock %}
