@@ -26,7 +26,7 @@
             {% endif %}
         </ul>
     </nav>
-    
+
     <header>
         <div class="info-content">
             <h1>encontre tanana tananaa </h1>
@@ -109,27 +109,27 @@
     <section class="carrossel">
 
         <div class="box-text">
-            <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, tenetur illo? Veritatis porro ea
-                quod laudantium aut temporibus, error a. </h2>
-
+            <h2> Segundo a OMS (Organização Mundial de Saúde) <br> 4,4% da população mundial sofrem com depressão, sendo
+                5,8% no Brasil
+            </h2>
         </div>
 
         <div class="box-text">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, deserunt.</h2>
+            <h2> O Brasil é recordista mundial em transtornos de ansiedade,<br>sendo 9,3% de brasileiros que
+                constantemente sofrem com esse transtorno.</h2>
         </div>
 
         <div class="box-text">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat ad mollitia? Blanditiis ex odit
-                illum consequuntur adipisci repellendus. <br> Magni quo deserunt id ipsam quos in aliquam ex expedita,
-                architecto quis reiciendis? Porro fugit voluptatum quos at assumenda nihil perspiciatis?</h2>
+            <h2>De acordo com o instituto de psiquiatria do hospital das clinícas,<br> cerca de 10% de crianças e
+                adolescentes sofrem com ansiedade.
+            </h2>
         </div>
 
         <div class="box-text">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos aperiam, corporis, pariatur ipsam
-                ab sint harum vel mollitia hic corrupti <br> tempore temporibus a sapiente repellendus dolores commodi
-                animi
-                odio. Ipsa vero voluptates iusto, harum voluptatum ipsum dolor br exercitationem! Culpa tenetur aliquam
-                neque doloremque sapiente dolorem, adipisci excepturi quis error.</h2>
+            <h2>Professores da UFRN (Universidade Federal do Rio Grande do Norte), <br> citam uma série de fatores de risco
+                que deixam os estudantes vulneráveis á depressão,<br> como distância de casa, dificuldades financeiras e
+                principalmente a pressão. <br> Em que 5% desses jovens declararam a tentativa de suicídio.
+            </h2>
 
         </div>
 
@@ -164,7 +164,7 @@
             <div class="items">
                 <img src="{% static 'img/icons/map-location.svg' %}" alt="">
                 <h2> Facilidade de Busca </h2>
-                <p> Encontre os melhores consultórios e instituições  mais próximo de você.</p>
+                <p> Encontre os melhores consultórios e instituições mais próximo de você.</p>
             </div>
             <hr>
         </div>
@@ -202,7 +202,7 @@
 
         </div>
 
-        <div class="organizar"> 
+        <div class="organizar">
             <div class="card">
 
                 <img src="/static/img/logo.jpg" alt="">
@@ -215,12 +215,12 @@
 
             <div class="links">
 
-                <div class="Redes"> 
-                        <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a> 
-                        <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt" ></a>
-                        <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
-                </div>            
-                
+                <div class="Redes">
+                    <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
+                    <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt"></a>
+                    <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
+                </div>
+
                 <div class="names">
                     <p>Facebook</p>
                     <p>Twitter</p>
@@ -234,45 +234,45 @@
 
     <!----------------- LOGIN ----------------->
 
-        <div id="modal" class="login-container">
-            <div class="login">
-                <button class="btnfechar">x</button>
-                <p class="p-login">Entre</p>
-                <form class="form-login" action="/">
-                    {% csrf_token %}
-                    <p>Digite seu e-mail:</p>
-                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
-                    <p>Digite sua senha:</p>
-                    <input type="password">
-                    <p class="msg"> {{msg}}</p>
-                    <input class="entrarbtn" type="button" value="Entrar  ">
-                </form>
-            </div>
-
     <div id="modal" class="login-container">
         <div class="login">
             <button class="btnfechar">x</button>
             <p class="p-login">Entre</p>
-            <form class="form-login" method="POST" action="/login">
+            <form class="form-login" action="/">
                 {% csrf_token %}
                 <p>Digite seu e-mail:</p>
                 <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
                 <p>Digite sua senha:</p>
                 <input type="password">
                 <p class="msg"> {{msg}}</p>
-                {% if logado %}
-                <p class="msg">esta logado</p>
-                {% endif %}
-                <input class="entrarbtn" type="submit" value="Entrar  ">
+                <input class="entrarbtn" type="button" value="Entrar  ">
             </form>
         </div>
-    </div>
-    {% if modal_ativo %}
-    <!-- Esta horrorosa gambiarra é para manter o modal ativo quando alguem falhar no login -->
-    <script>
-        document.getElementById('modal').classList.add('mostrar');
-    </script>
-    {% endif %}
+
+        <div id="modal" class="login-container">
+            <div class="login">
+                <button class="btnfechar">x</button>
+                <p class="p-login">Entre</p>
+                <form class="form-login" method="POST" action="/login">
+                    {% csrf_token %}
+                    <p>Digite seu e-mail:</p>
+                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
+                    <p>Digite sua senha:</p>
+                    <input type="password">
+                    <p class="msg"> {{msg}}</p>
+                    {% if logado %}
+                    <p class="msg">esta logado</p>
+                    {% endif %}
+                    <input class="entrarbtn" type="submit" value="Entrar  ">
+                </form>
+            </div>
+        </div>
+        {% if modal_ativo %}
+        <!-- Esta horrorosa gambiarra é para manter o modal ativo quando alguem falhar no login -->
+        <script>
+            document.getElementById('modal').classList.add('mostrar');
+        </script>
+        {% endif %}
 </body>
 
 {% endblock %}
