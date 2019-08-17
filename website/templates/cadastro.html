@@ -3,13 +3,14 @@
 {% block conteudo %}
 
 <div id="container"> 
+    {{msg}}
     <div class="caixa">
-        <input id='first' type="image" src="/static/img/NewPatient.png" draggable="false" >
+        <input id='first' type="image" src="/static/img/icons/NewPatient.png" draggable="false" >
         <p> Paciente </p>
     </div>
 
     <div class="caixa">
-        <input id='second' type="image"  src="/static/img/inst.png" draggable="false">
+        <input id='second' type="image"  src="/static/img/icons/inst.png" draggable="false">
         <p> Instituição </p>
     </div>
 </div> 
@@ -22,34 +23,34 @@
         <div class="column1">
             <h2> 1.Dados Pessoais </h2>
             <label> Nome </label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome" value="Maria" required>
 
 
             <label> Sobrenome </label>
-            <input type="text" name="sobrenome" required>
+            <input type="text" name="sobrenome" value="Joane" required>
 
             <label> Data de Nascimento </label>
-            <input type="date" name="data_nasc" prequired>
+            <input type="date" name="data_nasc" value="03/11/1999" required>
 
             <label> Gênero </label>
             <select name="genero" required>
                 <option value="#"> Selecione </option>
                 <option value="F"> Feminino </option>
                 <option value="M"> Masculino </option>
-                <option value="O"> Outros </option>
+                <option value="O" selected> Outros </option>
             </select>
 
             <label> CPF </label>
             <input class='cpf-input' type="text" name="cpf" maxlength='14' required>
 
             <label> Telefone </label>
-            <input type="text" name="telefone" placeholder="Ex: 96342-6101" maxlength="11" required>
+            <input type="text" name="telefone" placeholder="Ex: 96342-6101" maxlength="11" value="11996266256" required>
         </div>
 
         <div class="column2">
             <h2> 2.Endereço </h2>
             <label> CEP </label>
-            <input class='cep-input' type="text" name="cep" placeholder='Ex: 02873-000' maxlength="9" required>
+            <input class='cep-input' type="text" name="cep" value="01001-001" placeholder='Ex: 02873-000' maxlength="9" required>
             <button class='btn' type='button'> Buscar Endereço </button>
 
             <label> Rua </label>
@@ -71,10 +72,10 @@
         <div class="column3">
             <h2> 3.Conta</h2>
             <label> Email </label>
-            <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
+            <input type="email" name="email" placeholder='exemplo@gmail.com' value="exemplo@gmail.com" required>
 
             <label> Senha </label>
-            <input type="password" name="senha" minlength='5' maxlength="8">
+            <input type="password" name="senha" minlength='5' maxlength="8" value="examplo123">
 
             <input class='button' type="submit" value="Cadastrar">
         </div>
@@ -88,19 +89,19 @@
         <div class="column1">
             <h2> 1.Dados da Empresa </h2>
             <label> Nome da Empresa </label>
-            <input type="text" name="nome_empresa" required>
+            <input type="text" name="nome_empresa" value="zenclub" required>
 
             <label> CNPJ </label>
-            <input type="text" name="cnpj" required>
+            <input type="text" name="cnpj" value="444444444444" required>
 
             <label> Telefone Comercial </label>
-            <input type="text" name="telefone_comercial" placeholder="Ex:96342-6101" required>
+            <input type="text" name="telefone_comercial" value="96342-6101" placeholder="Ex:96342-6101" required>
         </div>
 
         <div class="column2">
             <h2> 2.Endereço </h2>
             <label> CEP </label>
-            <input class='cep-input' type="text" name="cep" placeholder='Ex: 02873-000' maxlength="9" required>
+            <input class='cep-input' type="text" name="cep" value="02873-000" placeholder='Ex: 02873-000' maxlength="9" required>
             <button class='btn' type='button'> Buscar Endereço </button>
 
             <label> Rua </label>
@@ -122,10 +123,10 @@
         <div class="column3">
             <h2> 3.Conta </h2>
             <label> Email Comercial </label>
-            <input type="text" name="email_comercial" placeholder=' exemplo@gmail.com' required>
+            <input type="text" name="email_comercial" value="exemplo@gmail.com" placeholder=' exemplo@gmail.com' required>
 
             <label> Senha </label>
-            <input type="password" name="senha" maxlength="8">
+            <input type="password" name="senha" value="exemplo123" maxlength="8">
             <input class='button' type="submit" value="Cadastrar">
         </div>
     </form>
