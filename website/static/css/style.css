@@ -7,13 +7,16 @@ body {
     display: grid;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
-    grid-template-areas: 'nav nav nav nav'
+    grid-template-areas:'nav nav nav nav'
                         'header header header header '
                         'fstSection fstSection fstSection fstSection'
                         'scdSection scdSection scdSection scdSection '
+                        'thdSection thdSection thdSection thdSection'
                         'footer footer footer footer';
-    grid-template-rows: 10vh 90vh 90vh 50vh 40vh;
+    grid-template-rows: 10vh 90vh 40vh 50vh 90vh 40vh;
 }
+
+
 
 /* formatar logo aqui */
 span.logo {
@@ -196,41 +199,19 @@ header input[type=submit] {
     margin-left: -5px;
     width: 80px;
 }
+/* ----------------------------------------- 1: SECTION SOBRE A PLATAFORMA --------------------------------------- */
 
-/* ------------------------------------------------ SECTION SOBRE----------------------------------------------------- */
-
-section.sobre {
-    grid-area: fstSection;
+section.projeto {
+    grid-area: fstSection; 
+    background: white;
     display: flex;
+    align-items: center;
     text-align: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center; 
+    position: relative;
 }
 
-/* O que segura os itens da section sobre */
-
-div.sobre-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Os cards da section sobre */
-
-div.items {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-div.items img {
-    height: 60px;
-}
-
-
-/* --------------------------------------------- SECTION CARROSEL --------------------------------------------------- */
+/* --------------------------------------------- 2: SECTION CARROSEL --------------------------------------------- */
 
 section.carrossel {
     grid-area: scdSection;
@@ -311,9 +292,41 @@ section.box-text{
   }
 
 
-  /* -----------------------------------------------------------FOOTER----------------------------------------------------- */
+/* ------------------------------------- 3: SECTION SOBRE AS VANTAGENS -------------------------------------------- */
 
-  .social {
+section.sobre {
+    grid-area: thdSection;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* O que segura os itens da section sobre */
+
+div.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Os cards da section sobre */
+
+div.items {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.items img {
+    height: 60px;
+}
+
+/* -----------------------------------------------------------FOOTER----------------------------------------------------- */
+
+.social {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -467,8 +480,14 @@ footer .footer-card {
 @media(max-width: 760px) {
     body {
         font-size: 1.4rem;
-        grid-template-rows: 15vh 60vh 150vh auto auto auto;
-        grid-template-areas: 'nav nav nav nav''header header header header ''fstSection fstSection fstSection fstSection''scdSection scdSection scdSection scdSection ''registrar registrar registrar registrar ''footer footer footer footer';
+        grid-template-rows: 15vh 60vh 150vh auto auto auto auto;
+        grid-template-areas: 'nav nav nav nav'
+                            'header header header header '
+                            'fstSection fstSection fstSection fstSection'
+                            'scdSection scdSection scdSection scdSection '
+                            'thdSection thdSection thdSection thdSection'
+                            'registrar registrar registrar registrar '
+                            'footer footer footer footer';
     }
 
     nav a {
