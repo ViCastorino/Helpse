@@ -60,8 +60,7 @@ nav ul {
     width: 70%;
 }
 
-nav li:hover,
-.secondary:hover {
+nav li:hover{
     transition: 0.5s;
     color: #ff6b6b;
     cursor: pointer;
@@ -70,7 +69,7 @@ nav li:hover,
 
 /* botões primarios: submit e login  */
 
-.primary {
+.primary ,.secondary {
     background: #9D5BB2;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     color: white;
@@ -80,7 +79,7 @@ nav li:hover,
 
 
 
-.primary:hover {
+.primary:hover, .secondary:hover {
     transform: scale(1.1);
 }
 
@@ -371,35 +370,36 @@ div.items img {
     background: -webkit-linear-gradient(left, #9D5BB2, #EF698C);
     background: linear-gradient(to right, #9D5BB2, #EF698C);
     font-family: 'Oleo Script', cursive;
-    font-size: 50px;
+    font-size:20pt;
     text-align: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-@keyframes login {
+@keyframes animation {
     from {
         opacity: 0;
         transform: translate(0, -60px, 0);
-    }
+     }
 
     to {
         opacity: 1;
         transform: translate(0, 0, 0);
-    }
+      }
 }
 
 .login {
-    animation: login .3s;
+    animation-name: animation;
+    animation-duration: 2s;
     background-color: white;
     font-family: sans-serif;
     color: #3a1a53;
-    width: 60%;
+    width: 35%;
     min-width: 300px;
     padding: 40px;
     border: 0px solid #9D5BB2;
-    border-radius: 20px;
-    box-shadow: 0 0 0 5px #EF698C;
+    border-radius: 10px;
+    box-shadow: 0 0 0 5px #a32ea3;
     position: relative;
 }
 
@@ -410,17 +410,16 @@ div.items img {
 .btnfechar {
     position: absolute;
     font-size: 1.2rem;
-    width: 40px;
-    right: -25px;
-    height: 45px;
-    top: -25px;
-    border: 3px solid #EF698C;
+    width: auto;
+    right: -3px;
+    height: 35px;
+    top: -3px;
+    border-radius: 5px;
+    border: 1px solid #a32ea3;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     font-family: 'Varela Round', sans-serif;
     color: white;
-    border-radius: 35px;
     transition: 0.5s;
-    border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
 }
