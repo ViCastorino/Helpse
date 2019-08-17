@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from  website.models import Paciente, Instituicao
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -11,7 +12,7 @@ def agendar(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
      query = request.GET.get('q')
      object_list = Instituicao.objects.filter(
-          Q(nome_empresa__icontains=query) | Q(cidade__icontains=query)
+          Q(nome_empresa__icontains=query) | Q(municipio__icontains=query)
      )
      print (object_list)
      contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list}
