@@ -551,6 +551,7 @@ div.items img {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        background-color: #3d3d3d;
     }
     
     .card{
@@ -619,20 +620,6 @@ div.items img {
         background-size: cover;
     }
     
-    .moviebox{
-        position: absolute;
-        width: 100%;
-        /* height: 40vh; */
-        height: 40vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-    }
-    .moviebox video{
-        min-width: 100%;
-        min-height: 100%;
-    }
-    
     .organizar{
         width: 1000px;
         height: 35vh;
@@ -654,13 +641,6 @@ div.items img {
         font-size: 20px;
         font-weight: bold;
     }
-    .overlay{
-        height: 40vh;
-        width: 100%;
-        position: relative;
-        background: #3A1b55;
-        z-index: 1;
-        opacity: 0.65;
-    }
+    
     
 
