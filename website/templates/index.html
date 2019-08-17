@@ -12,13 +12,21 @@
             <li><a id="link-sobre"> sobre nós</a> </li>
             <li><a id="link-carrossel"> levar p carrossel</a> </li>
 
+            {% if logado %}
+            <div class="buttons">
+                <a href="perfil"><button class="primary">atualize seus dados</button></a>
+                <button id="btn-sair" class="btn-sair secondary">sair</button>
+            </div>
+
+            {% else %}
             <div class="buttons">
                 <a href="cadastro"><button class="primary">cadastre-se</button></a>
                 <button id="btnmostrar" class="btnmostrar secondary">entre</button>
             </div>
+            {% endif %}
         </ul>
     </nav>
-
+    
     <header>
         <div class="info-content">
             <h1>encontre tanana tananaa </h1>
@@ -27,11 +35,23 @@
             <!-- exibir uma nav diferente -->
             está logado
             {% endif %}
-            <form class="search-bar" action="/agendar">
-                {% csrf_token %}
-                <input class="text input" name=`search-bar` type="text" name="" id="" placeholder="onde você está?">
-                <input class="sub input" type="submit" value="Q">
-            </form>
+
+            <div class="input-container">
+                <form method="get" class="search-bar especialidade" action="/agendar">
+                    <input class="text input" data-js="pesquisa" name='q' id="id_q" type="text"
+                        placeholder="busque por especialidade">
+                    <img class="input-icon" draggable="false" src="{% static 'img/search.svg' %}" alt="">
+                </form>
+
+                <script>
+                    document.querySelector('[data-js="pesquisa"]').value = "{{query}}";
+                </script>
+
+                <form method="get" class="search-bar localidade" action="/agendar">
+                    <input class="text input" name='q' type="text" placeholder="busque por localidade">
+                    <img class="input-icon" draggable="false" src="{% static 'img/pin.svg' %}" alt="">
+                </form>
+            </div>
         </div>
 
         {% if mostrar_resultados %}
@@ -53,114 +73,86 @@
                         <span class="info-distancia">1km</span>
                     </div>
                 </li>
-
-                <li>
-                    <div class="instituicao-container">
-                        <span class="row">
-                            <img src="{% static 'img/deviantart.svg' %}" alt="">
-                            <h3>zapsicologia</h3>
-                        </span>
-
-                        <span class="column">
-                            <h3>presencial</h3>
-                            <p>local</p>
-                        </span>
-
-                        <span class="info-distancia">1km</span>
-                    </div>
-                </li>
-
+                {% for inst in object_list %}
                 <li>
                     <div class="instituicao-container">
                         <span class="row">
                             <img src="{% static 'img/adwords.svg' %}" alt="">
-                            <h3>void psicologia</h3>
+                            <h3>{{inst.nome_empresa}}</h3>
                         </span>
 
                         <span class="column">
                             <h3>presencial</h3>
-                            <p>local</p>
+
+                            <p>{{inst.cidade}}, {{inst.uf}}</p>
                         </span>
 
                         <span class="info-distancia">1km</span>
                     </div>
                 </li>
 
-                <li>
-                    <div class="instituicao-container">
-                        <span class="row">
-                            <img src="{% static 'img/deviantart.svg' %}" alt="">
-                            <h3>zapsicologia</h3>
-                        </span>
-
-                        <span class="column">
-                            <h3>presencial</h3>
-                            <p>local</p>
-                        </span>
-
-                        <span class="info-distancia">1km</span>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </section>
         {% endif%}
     </header>
 
 
-<!--------------------------------- 1: SECTION SOBRE O PROJETO -------------------------------------------->
-<section class="projeto">
+    <!--------------------------------- 1: SECTION SOBRE O PROJETO -------------------------------------------->
+    <section class="projeto">
 
-</section>
+    </section>
 
 
- <!-------------------------------------- 2: SECTION DO CARROSSEL ----------------------------------------->
+    <!-------------------------------------- 2: SECTION DO CARROSSEL ----------------------------------------->
 
- <section class="carrossel">
+    <section class="carrossel">
 
-    <div class="box-text">
-        <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, tenetur illo? Veritatis porro ea
-            quod laudantium aut temporibus, error a. </h2>
+        <div class="box-text">
+            <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, tenetur illo? Veritatis porro ea
+                quod laudantium aut temporibus, error a. </h2>
 
-    </div>
+        </div>
 
-    <div class="box-text">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, deserunt.</h2>
-    </div>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, deserunt.</h2>
+        </div>
 
-    <div class="box-text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat ad mollitia? Blanditiis ex odit
-            illum consequuntur adipisci repellendus. <br> Magni quo deserunt id ipsam quos in aliquam ex expedita,
-            architecto quis reiciendis? Porro fugit voluptatum quos at assumenda nihil perspiciatis?</h2>
-    </div>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quaerat ad mollitia? Blanditiis ex odit
+                illum consequuntur adipisci repellendus. <br> Magni quo deserunt id ipsam quos in aliquam ex expedita,
+                architecto quis reiciendis? Porro fugit voluptatum quos at assumenda nihil perspiciatis?</h2>
+        </div>
 
-    <div class="box-text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos aperiam, corporis, pariatur ipsam
-            ab sint harum vel mollitia hic corrupti <br> tempore temporibus a sapiente repellendus dolores commodi animi
-            odio. Ipsa vero voluptates iusto, harum voluptatum ipsum dolor br exercitationem! Culpa tenetur aliquam
-            neque doloremque sapiente dolorem, adipisci excepturi quis error.</h2>
+        <div class="box-text">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos aperiam, corporis, pariatur ipsam
+                ab sint harum vel mollitia hic corrupti <br> tempore temporibus a sapiente repellendus dolores commodi
+                animi
+                odio. Ipsa vero voluptates iusto, harum voluptatum ipsum dolor br exercitationem! Culpa tenetur aliquam
+                neque doloremque sapiente dolorem, adipisci excepturi quis error.</h2>
 
-    </div>
+        </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(+1)">&#10095;</a>
 
-    <div class="navegation">
-        <label class="dot" onclick="currentSlide(1)"></label>
-        <label class="dot" onclick="currentSlide(2)"></label>
-        <label class="dot" onclick="currentSlide(3)"></label>
-        <label class="dot" onclick="currentSlide(4)"></label>
-    </div>
+        <div class="navegation">
+            <label class="dot" onclick="currentSlide(1)"></label>
+            <label class="dot" onclick="currentSlide(2)"></label>
+            <label class="dot" onclick="currentSlide(3)"></label>
+            <label class="dot" onclick="currentSlide(4)"></label>
+        </div>
 
-</section>
+    </section>
 
-<!----------------------------- 3: SECTION SOBRE AS VANTAGENS DA PLATAFORMA --------------------------->
+    <!----------------------------- 3: SECTION SOBRE AS VANTAGENS DA PLATAFORMA --------------------------->
     <section class="sobre">
         <!-- <h2>um pouco sobre nós</h2> -->
         <div class="sobre-content">
             <div class="items">
                 <img src="{% static 'img/icons/video-call.svg' %}" alt="">
-                <h2>Editable Theme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2> Consultas Dinâmicas </h2>
+                <p> Atendimento online e presencial a escolha do cliente, rápido e simples, é só conectar.</p>
             </div>
             <hr>
             <div class="items">
@@ -171,8 +163,8 @@
             <hr>
             <div class="items">
                 <img src="{% static 'img/icons/map-location.svg' %}" alt="">
-                <h2>Reach your audience</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2> Facilidade de Busca </h2>
+                <p> Encontre os melhores consultórios e instituições  mais próximo de você.</p>
             </div>
             <hr>
         </div>
@@ -180,20 +172,20 @@
         <div class="sobre-content">
             <div class="items">
                 <img src="{% static 'img/icons/icon_custo.png' %}" alt="">
-                <h2>Editable Theme</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2> Custo Benefício </h2>
+                <p> Agende com os melhores profissionais pelo menor preço e com instituições gratuitas. </p>
             </div>
             <hr>
             <div class="items">
                 <img src="{% static 'img/icons/icon_avaliation.png' %}" alt="">
-                <h2>Flat Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2> Pré-Análise </h2>
+                <p> Questionário que avalia o estado do paciente, a fim de auxiliar na procura de tratamento. </p>
             </div>
             <hr>
             <div class="items">
-                <img src="{% static 'img/icons/map-location.svg' %}" alt="">
-                <h2>Reach your audience</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <img src="{% static 'img/icons/icon_calendar.png' %}" alt="">
+                <h2> Agendamento Online </h2>
+                <p> Agendamento rápido e simples. Escolha o melhor local, data e horário </p>
             </div>
             <hr>
 
@@ -203,60 +195,84 @@
     <!------------------------------- 4: FOOTER --------------------------------------->
 
     <footer>
-        <div class="footer-card">
-            <ul>
-                <span class="logo">loguinho</span>
-                <p>dfsjhfdjhfdshjfdsjhfdhjlffs</p>
-                <span class="social">
-                    <li><a href="#">FB </a></li>
-                    <li><a href="#">TT </a></li>
-                    <li><a href="#">IN </a></li>
-                </span>
-            </ul>
-            <hr>
+        <div class="moviebox">
+            <video src="/static/img/Smartphone.mov" autoplay="true" loop="true"></video>
+            <!-- <video src="/static/img/video.mp4" autoplay="true" loop="true"></video> -->
+            <div class="overlay"></div>
+
         </div>
 
-        <div class="footer-card">
-            <ul>
-                <li>
-                    <h3> Como tudo começou...</h3>
-                </li>
-                <li><a href="#">lorem etc </a></li>
-                <li><a href="#">lorem etc </a></li>
-                <li><a href="#">lorem etc </a></li>
-            </ul>
+        <div class="organizar"> 
+            <div class="card">
+
+                <img src="/static/img/logo.jpg" alt="">
+
+                <p> Contato: </p>
+                <h1>Telefone: (11) 1234-4321</h1>
+                <h1>E-mail: Cuidados.da.mente@brainstartup.com </h1>
+            </div>
+
+
+            <div class="links">
+
+                <div class="Redes"> 
+                        <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a> 
+                        <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt" ></a>
+                        <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
+                </div>            
+                
+                <div class="names">
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram</p>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-card">
-            <ul>
-                <li>
-                    <h3> Como tudo começou...</h3>
-                </li>
-                <li><a href="#">lorem etc </a></li>
-                <li><a href="#">lorem etc </a></li>
-                <li><a href="#">lorem etc </a></li>
-            </ul>
-        </div>
     </footer>
 
 
-    <!--------------------------------- LOGIN DINÂMICO -------------------------------->
+    <!----------------- LOGIN ----------------->
+
+        <div id="modal" class="login-container">
+            <div class="login">
+                <button class="btnfechar">x</button>
+                <p class="p-login">Entre</p>
+                <form class="form-login" action="/">
+                    {% csrf_token %}
+                    <p>Digite seu e-mail:</p>
+                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
+                    <p>Digite sua senha:</p>
+                    <input type="password">
+                    <p class="msg"> {{msg}}</p>
+                    <input class="entrarbtn" type="button" value="Entrar  ">
+                </form>
+            </div>
 
     <div id="modal" class="login-container">
         <div class="login">
             <button class="btnfechar">x</button>
             <p class="p-login">Entre</p>
-            <form class="form-login" action="/">
+            <form class="form-login" method="POST" action="/login">
                 {% csrf_token %}
                 <p>Digite seu e-mail:</p>
                 <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
                 <p>Digite sua senha:</p>
                 <input type="password">
                 <p class="msg"> {{msg}}</p>
-                <input class="entrarbtn" type="button" value="Entrar  ">
+                {% if logado %}
+                <p class="msg">esta logado</p>
+                {% endif %}
+                <input class="entrarbtn" type="submit" value="Entrar  ">
             </form>
         </div>
     </div>
+    {% if modal_ativo %}
+    <!-- Esta horrorosa gambiarra é para manter o modal ativo quando alguem falhar no login -->
+    <script>
+        document.getElementById('modal').classList.add('mostrar');
+    </script>
+    {% endif %}
 </body>
 
 {% endblock %}

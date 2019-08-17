@@ -1,18 +1,54 @@
 from django.shortcuts import render, redirect
 from  website.models import Paciente, Instituicao
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
     contexto= {}
     return render( request, 'index.html', contexto)
 
-def login(request):
-    contexto = {}
-    return render( request, 'login.html', contexto)
-
+# Incompleta
 def agendar(request):
-     contexto = {'mostrar_resultados': True}
+     # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
+     query = request.GET.get('q')
+     object_list = Instituicao.objects.filter(
+          Q(nome_empresa__icontains=query) | Q(municipio__icontains=query)
+     )
+     print (object_list)
+     contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list}
+     print(contexto)
      return render( request, 'index.html', contexto)
+
+
+def login(request):
+    if request.method == 'POST':
+     
+     #Verifica se o email digitado no imput do login consta na nossa base
+     email_comercical_form = request.POST.get('email')
+     email_form = request.POST.get('email')
+     pessoa = Paciente.objects.filter(email = email_form).first() or Instituicao.objects.filter(email_comercial = email_comercical_form).first()
+
+     print(f'{pessoa} está tentando entrar no nosso sistema')
+
+     # Se nada for encontrado, passar no contexto a variavel logado como false e retornar para o index, mas para o usuário
+     # nao ter que clicar no botao para aparecer o modal novamente , passar a variável modal_ativo como true e fazer aconter la no html
+     
+     if pessoa is None: 
+       print('Ops, se cadastra primeiro ai pô')
+       contexto = {'msg': 'oops, não encontramos este email na nossa base de dados', 'logado':False, 'modal_ativo':True}
+       return render(request, 'index.html' , contexto)
+    
+     # Verificar o tipo de usuário com o has attribute e retornar a variável logado como True, e mandando de volta para a  index
+     else:
+      if hasattr(pessoa , 'nome'):
+          contexto = {'pessoa': pessoa , 'msg':f'Boas vindas, {pessoa.nome}! Aproveite o site :)','pessoa': pessoa , 'logado':True}
+      elif hasattr(pessoa , 'nome_empresa'):
+          contexto = {'pessoa': pessoa , 'msg':f'Boas vindas, {pessoa.nome_empresa}! Aproveite o site :)','pessoa': pessoa , 'logado':True}
+
+      return render(request, 'index.html', contexto)
+
+    contexto = {}
+    return render( request, 'index.html', contexto)
 
 # função de cadastrar cliente
 def cadastro(request):
