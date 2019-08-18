@@ -1,0 +1,45 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    font-family:'Roboto Slab', serif;;
+
+}
+.titulo{
+    font-family:'Roboto Slab', serif;
+    font-size:20pt;
+    text-align: center;
+}
+.logos{
+    width: 26px;
+    height: 26px;
+}
+
+.a-gente{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.sobreNos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2px;
+    background-color: #f3f3f363;
+    text-align: center;
+    padding: 60px;
+}
+.descricaosobre {
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 18px;
+}
+
+#sobreNos {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}

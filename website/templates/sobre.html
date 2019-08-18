@@ -1,7 +1,69 @@
 {% extends 'shared/layout.html' %}
 
 {% block conteudo %}
+<main>
+<nav>
+        <span class="logo"> logo bonitão </span>
+        <ul>
+            <li><a id="link-inicio" href="/"> Home </a> </li>
+            <li><a id="link-sobre" href="/sobre"> Sobre Nós</a> </li>
+            <li><a id="link-carrossel"> Vantagens</a> </li>
 
-<h1> Página sobre o projeto </h1>
+            {% if logado %}
+            <div class="buttons">
+                <a href="perfil"><button class="primary">atualize seus dados</button></a>
+                <button id="btn-sair" class="btn-sair secondary">sair</button>
+            </div>
 
+            {% else %}
+            <div class="buttons">
+                <a href="cadastro"><button class="primary">cadastre-se</button></a>
+                <button id="btnmostrar" class="btnmostrar secondary">entre</button>
+            </div>
+            {% endif %}
+        </ul>
+    </nav>
+
+<section id="SobreNos">
+    <div>
+        <h4 class="titulo">Quem somos</h4>
+    </div>
+    <div class="a-gente"> 
+        <div class="pessoa"> 
+            <img class="circle" src="#"> 
+            <h4>Agnes Dias</h4>
+           <h5>idade</h5>
+           <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
+           <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+        </div>
+        <div class="pessoa"> 
+            <img class="circle" src="#"> 
+            <h4>Barbára Moreira </h4>
+           <h5>18 anos</h5>
+           <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
+           <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+        </div>
+        <div class="pessoa"> 
+            <img class="circle" src="#"> 
+            <h4>Lorrany Hengles</h4>
+           <h5>18 anos</h5>
+           <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
+           <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+        </div>
+        <div class="pessoa"> 
+            <img class="circle" src="#"> 
+            <h4>Pedro</h4>
+            <h5>idade</h5>
+            <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
+            <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+        </div>
+        <div > 
+            <img  class="circle" src="#"> 
+           <h4>Vitor Castorino</h4>
+           <h5>  idade</h5>
+           <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
+           <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+        </div>
+    </div>
+</main>
 {% endblock %}

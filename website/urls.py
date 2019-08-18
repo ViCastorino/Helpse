@@ -8,5 +8,6 @@ urlpatterns = [
     path('cadastro', views.cadastro),
     path('cadastro_instituicao', views.cadastro_instituicao),
     path('agendar', views.agendar),
+    path('sobre',views.sobre),
 
 ]
