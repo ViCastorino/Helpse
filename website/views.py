@@ -14,12 +14,24 @@ def sobre(request):
 # Incompleta
 def agendar(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
+     queryset = []
      query = request.GET.get('q')
-     object_list = Instituicao.objects.filter(
-          Q(nome_empresa__icontains=query) | Q(municipio__icontains=query)
-     )
-     print (object_list)
-     contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list}
+     
+     queries = query.split(" ")
+
+     for q in queries:
+          object_list = Instituicao.objects.filter(
+               Q(nome_empresa__icontains=q) | Q(municipio__icontains=q)
+          ).distinct()
+          print (f'Esta é a lista de objetos {object_list} ###')
+
+          for obj in object_list:
+               print(f'OLHA O OBJETO {obj} <<<')
+               queryset.append(obj)
+
+     num_resultados = len(object_list)
+     lista_obj = list(set(queryset))
+     contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list, 'queryset':lista_obj,'num_resultados': num_resultados}
      print(contexto)
      return render( request, 'index.html', contexto)
 
@@ -114,7 +126,8 @@ def cadastro_instituicao(request):
                instituicao.uf = request.POST.get ('uf')
                instituicao.senha = request.POST.get ('senha')
                instituicao.save()
-               return  render(request, 'login.html', contexto)
+               contexto = {'instituicao': instituicao,'logado':True}
+               return  render(request, 'index.html', contexto)
           else:
                contexto= {'msg':f'Ooops, parece que já cadastraram esse email'}
                return  render(request, 'cadastro.html', contexto)

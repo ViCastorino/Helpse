@@ -30,10 +30,10 @@
             {% endif %}
         </ul>
     </nav>
-    
+
     <header>
         <div class="info-content">
-            <h1>encontre tanana tananaa </h1>
+            <h1>encontre tanana tananaa {{instituicao}} </h1>
             <p>{{msg}} </p>
 
 
@@ -57,23 +57,9 @@
 
         {% if mostrar_resultados %}
         <section class="resultados">
-            <h2> encontramos x instituições em "lorem valley"</h2>
+            <h2> encontramos {{num_resultados}} resultados para {{query}}</h2>
             <ul class="ul-resultados">
-                <li>
-                    <div class="instituicao-container">
-                        <span class="row">
-                            <img src="{% static 'img/adwords.svg' %}" alt="">
-                            <h3>void psicologia</h3>
-                        </span>
-
-                        <span class="column">
-                            <h3>presencial</h3>
-                            <p>local</p>
-                        </span>
-
-                        <span class="info-distancia">1km</span>
-                    </div>
-                </li>
+                {% if object_list %}
                 {% for inst in object_list %}
                 <li>
                     <div class="instituicao-container">
@@ -85,7 +71,7 @@
                         <span class="column">
                             <h3>presencial</h3>
 
-                            <p>{{inst.cidade}}, {{inst.uf}}</p>
+                            <p>{{inst.municipio}}</p>
                         </span>
 
                         <span class="info-distancia">1km</span>
@@ -93,6 +79,14 @@
                 </li>
 
                 {% endfor %}
+
+                {% else %}
+                <li>
+                    <div class="instituicao-container">
+                        <p>nao achamos nada</p>
+                    </div>
+                </li>
+                {% endif %}
             </ul>
         </section>
         {% endif%}
@@ -202,7 +196,7 @@
     <!------------------------------- 4: FOOTER --------------------------------------->
 
     <footer>
-        <div class="organizar"> 
+        <div class="organizar">
             <div class="card">
 
                 <img src="/static/img/logo.jpg" alt="">
@@ -215,12 +209,12 @@
 
             <div class="links">
 
-                <div class="Redes"> 
-                        <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a> 
-                        <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt" ></a>
-                        <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
-                </div>            
-                
+                <div class="Redes">
+                    <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
+                    <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt"></a>
+                    <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
+                </div>
+
                 <div class="names">
                     <p>Facebook</p>
                     <p>Twitter</p>
