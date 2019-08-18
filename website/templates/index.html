@@ -10,8 +10,8 @@
         <span class="logo"> logo bonitão </span>
         <ul>
             <li><a id="link-inicio" href="/"> inicio </a> </li>
-            <li><a id="link-sobre"> sobre nós</a> </li>
-            <li><a id="link-carrossel"> levar p carrossel</a> </li>
+            <li><a id="link-sobre" href="/sobre"> sobre nós</a> </li>
+            <li><a id="link-carrossel"> Vantagens</a> </li>
 
             {% if logado %}
             <div class="buttons">
@@ -27,7 +27,7 @@
             {% endif %}
         </ul>
     </nav>
-
+    
     <header>
         <div class="info-content">
             <h1>encontre tanana tananaa </h1>
@@ -202,14 +202,7 @@
     <!------------------------------- 4: FOOTER --------------------------------------->
 
     <footer>
-        <div class="moviebox">
-            <video src="/static/img/Smartphone.mov" autoplay="true" loop="true"></video>
-            <!-- <video src="/static/img/video.mp4" autoplay="true" loop="true"></video> -->
-            <div class="overlay"></div>
-
-        </div>
-
-        <div class="organizar">
+        <div class="organizar"> 
             <div class="card">
 
                 <img src="/static/img/logo.jpg" alt="">
@@ -222,12 +215,12 @@
 
             <div class="links">
 
-                <div class="Redes">
-                    <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
-                    <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt"></a>
-                    <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
-                </div>
-
+                <div class="Redes"> 
+                        <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a> 
+                        <a class="balltwt" href="https://twitter.com/login?lang=pt" target="_blank" id="twt" ></a>
+                        <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
+                </div>            
+                
                 <div class="names">
                     <p>Facebook</p>
                     <p>Twitter</p>
@@ -241,45 +234,44 @@
 
     <!----------------- LOGIN ----------------->
 
-    <div id="modal" class="login-container">
-        <div class="login">
-            <button class="btnfechar">x</button>
-            <p class="p-login">Entre</p>
-            <form class="form-login" action="/">
-                {% csrf_token %}
-                <p>Digite seu e-mail:</p>
-                <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
-                <p>Digite sua senha:</p>
-                <input type="password">
-                <p class="msg"> {{msg}}</p>
-                <input class="entrarbtn" type="button" value="Entrar  ">
-            </form>
-        </div>
-
         <div id="modal" class="login-container">
             <div class="login">
                 <button class="btnfechar">x</button>
                 <p class="p-login">Entre</p>
-                <form class="form-login" method="POST" action="/login">
+                <form class="form-login" action="/">
                     {% csrf_token %}
                     <p>Digite seu e-mail:</p>
                     <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
                     <p>Digite sua senha:</p>
                     <input type="password">
                     <p class="msg"> {{msg}}</p>
-                    {% if logado %}
-                    <p class="msg">esta logado</p>
-                    {% endif %}
-                    <input class="entrarbtn" type="submit" value="Entrar  ">
+                    <input class="entrarbtn" type="button" value="Entrar  ">
                 </form>
             </div>
+
+    <div id="modal" class="login-container">
+        <div class="login">
+            <button class="btnfechar">x</button>
+            <p class="p-login">Entre</p>
+            <form class="form-login" method="POST" action="/login">
+                {% csrf_token %}
+                <p>Digite seu e-mail:</p>
+                <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
+                <p>Digite sua senha:</p>
+                <input type="password">
+                <p class="msg"> {{msg}}</p>
+                {% if logado %}
+                <p class="msg">esta logado</p>
+                {% endif %}
+                <input class="entrarbtn" type="submit" value="Entrar  ">
+            </form>
         </div>
-        {% if modal_ativo %}
-        <!-- Esta horrorosa gambiarra é para manter o modal ativo quando alguem falhar no login -->
-        <script>
-            document.getElementById('modal').classList.add('mostrar');
-        </script>
-        {% endif %}
+    </div>
+    {% if modal_ativo %}
+    <script>
+        document.getElementById('modal').classList.add('mostrar');
+    </script>
+    {% endif %}
 </body>
 
 {% endblock %}
