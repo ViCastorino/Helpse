@@ -38,20 +38,23 @@
 
 
             <div class="input-container">
-                <form method="get" class="search-bar especialidade" action="/agendar">
-                    <input class="text input" data-js="pesquisa" name='q' id="id_q" type="text"
+                <form method="get" class="search-bar especialidade" action="/busca_especialidade">
+                    <input class="text input" data-js="pesquisa-especialidade" name='q' id="id_q" type="text"
                         placeholder="busque por especialidade">
                     <img class="input-icon" draggable="false" src="{% static 'img/search.svg' %}" alt="">
                 </form>
 
-                <script>
-                    document.querySelector('[data-js="pesquisa"]').value = "{{query}}";
-                </script>
-
-                <form method="get" class="search-bar localidade" action="/agendar">
-                    <input class="text input" name='q' type="text" placeholder="busque por localidade">
+                <form method="get" class="search-bar localidade" action="/busca_localidade">
+                    <input class="text input" name='q' type="text" data-js="pesquisa-localidade"
+                        placeholder="busque por localidade">
                     <img class="input-icon" draggable="false" src="{% static 'img/pin.svg' %}" alt="">
                 </form>
+
+                <!-- Ao pesquisar o django limpa o input, usamos js pra manter o que foi digitado no lugar -->
+                <script>
+                    document.querySelector('[data-js="pesquisa-especialidade"]').value = '{{query}}';
+                    document.querySelector('[data-js="pesquisa-localidade"]').value = '{{query_l}}';
+                </script>
             </div>
         </div>
 

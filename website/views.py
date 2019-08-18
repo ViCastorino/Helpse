@@ -11,8 +11,37 @@ def sobre(request):
      contexto= {}
      return render( request, 'sobre.html', contexto)
 
-# Incompleta
-def agendar(request):
+
+def busca_localidade(request):
+     # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
+     if request.method == 'GET':
+          queryset = []
+          query_l = request.GET.get('q')
+
+          if not query_l.strip():
+               print('STRING TA VAZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+               return render( request, 'index.html', {})
+
+          queries = query_l.split(" ")
+
+          for q in queries:
+               object_list = Instituicao.objects.filter(
+                    Q(uf__icontains=q) | Q(municipio__icontains=q) | Q(cep__icontains=q) | Q(bairro__icontains=q) | Q(rua__icontains=q)
+               ).distinct()
+               print (f'Esta é a lista de objetos {object_list} ###')
+
+               for obj in object_list:
+                    print(f'OLHA O OBJETO {obj} <<<')
+                    queryset.append(obj)
+
+          num_resultados = len(object_list)
+          lista_obj = list(set(queryset))
+          contexto = {'mostrar_resultados': True , 'query_l' : str(query_l), 'object_list':object_list, 'queryset':lista_obj,'num_resultados': num_resultados}
+          print(contexto)
+          return render( request, 'index.html', contexto)
+
+
+def busca_especialidade(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
      if request.method == 'GET':
           queryset = []
