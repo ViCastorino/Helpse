@@ -14,26 +14,31 @@ def sobre(request):
 # Incompleta
 def agendar(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao
-     queryset = []
-     query = request.GET.get('q')
-     
-     queries = query.split(" ")
+     if request.method == 'GET':
+          queryset = []
+          query = request.GET.get('q')
 
-     for q in queries:
-          object_list = Instituicao.objects.filter(
-               Q(nome_empresa__icontains=q) | Q(municipio__icontains=q)
-          ).distinct()
-          print (f'Esta é a lista de objetos {object_list} ###')
+          if not query.strip():
+               print('STRING TA VAZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+               return render( request, 'index.html', {})
 
-          for obj in object_list:
-               print(f'OLHA O OBJETO {obj} <<<')
-               queryset.append(obj)
+          queries = query.split(" ")
 
-     num_resultados = len(object_list)
-     lista_obj = list(set(queryset))
-     contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list, 'queryset':lista_obj,'num_resultados': num_resultados}
-     print(contexto)
-     return render( request, 'index.html', contexto)
+          for q in queries:
+               object_list = Instituicao.objects.filter(
+                    Q(nome_empresa__icontains=q) | Q(municipio__icontains=q)
+               ).distinct()
+               print (f'Esta é a lista de objetos {object_list} ###')
+
+               for obj in object_list:
+                    print(f'OLHA O OBJETO {obj} <<<')
+                    queryset.append(obj)
+
+          num_resultados = len(object_list)
+          lista_obj = list(set(queryset))
+          contexto = {'mostrar_resultados': True , 'query' : str(query), 'object_list':object_list, 'queryset':lista_obj,'num_resultados': num_resultados}
+          print(contexto)
+          return render( request, 'index.html', contexto)
 
 
 def login(request):
