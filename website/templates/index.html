@@ -35,10 +35,7 @@
         <div class="info-content">
             <h1>encontre tanana tananaa </h1>
             <p>{{msg}} </p>
-            {% if logado%}
-            <!-- exibir uma nav diferente -->
-            está logado
-            {% endif %}
+
 
             <div class="input-container">
                 <form method="get" class="search-bar especialidade" action="/agendar">
@@ -236,21 +233,6 @@
 
 
     <!----------------- LOGIN ----------------->
-
-        <div id="modal" class="login-container">
-            <div class="login">
-                <button class="btnfechar">x</button>
-                <p class="p-login">Entre</p>
-                <form class="form-login" action="/">
-                    {% csrf_token %}
-                    <p>Digite seu e-mail:</p>
-                    <input type="email" name="email" placeholder=' exemplo@gmail.com' required>
-                    <p>Digite sua senha:</p>
-                    <input type="password">
-                    <p class="msg"> {{msg}}</p>
-                    <input class="entrarbtn" type="button" value="Entrar  ">
-                </form>
-            </div>
 
     <div id="modal" class="login-container">
         <div class="login">
