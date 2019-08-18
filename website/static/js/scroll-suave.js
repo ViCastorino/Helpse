@@ -22,21 +22,26 @@
    Seleciona os <a> da nav, quando cada um for clicado, de forma suave,
    levar até a section q é passada como parametro na função smoothscroll
    */
-  document.getElementById('link-sobre').addEventListener('click',
+
+  document.getElementById('link-inicio').addEventListener('click',
+  function () {
+    smoothScroll('header', 1000)
+  }, false)
+
+  document.getElementById('link-projeto').addEventListener('click',
+  function () {
+    smoothScroll('.projeto', 1000)
+  }, false)
+
+  document.getElementById('link-carrossel').addEventListener('click',
+  function () {
+    smoothScroll('.carrossel', 1000)
+  }, false)
+
+  document.getElementById('link-beneficio').addEventListener('click',
     function () {
       smoothScroll('.sobre', 1000)
     }, false)
-
-  document.getElementById('link-carrossel').addEventListener('click',
-    function () {
-      smoothScroll('.carrossel', 1000)
-    }, false)
-
-  document.getElementById('link-inicio').addEventListener('click',
-    function () {
-      smoothScroll('header', 1000)
-    }, false)
-
 })()
 
 function smoothScroll(target, duration) {
