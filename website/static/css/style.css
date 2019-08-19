@@ -607,14 +607,6 @@ div.items img {
         background: linear-gradient(to bottom right, #DFDCF2,#f3eff2);
     }
     
-    .card{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        width: 1200px;
-        height: 32vh;
-    }
     
     
     .links{
@@ -689,13 +681,9 @@ div.items img {
         position: absolute;    
         background:none;
     }
-    
-    }
-    .links p{
-        margin: 0;
-        font-size: 20px;
-        color: white;
-
+    . .organizar h2{
+        text-align: center;
+        font-size: 20pt;
     }
     
     
