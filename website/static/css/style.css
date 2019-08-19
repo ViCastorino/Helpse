@@ -623,28 +623,32 @@ div.items img {
     
     }
     .balltwt{
-        width: 95px;
-        height: 95px;
-        border-radius: 50%;
-        background-image: url("/static/img/icons/icontwt2.png");
+        width: 60px;
+        height: 60px;
+        background-image: url('../img/logos/email.png;');
         background-repeat: no-repeat;
         background-size: cover;
     }
     
     .ballinsta{
-        width: 95px;
-        height: 95px;
-        border-radius: 50%;
-        background-image: url("/static/img/icons/iconinsta2.png");
+        width: 60px;
+        height: 60px;
+        background-image: url('../img/logos/instagram.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
     
     .ballfb{
-        width: 95px;
-        height: 95px;
-        border-radius: 50%;
-        background-image: url("/static/img/icons/iconfb2.png");
+        width: 60px;
+        height: 60px;
+        background-image: url('../img/logos/facebook-app-logo.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .ballyt{
+        width: 60px;
+        height: 60px;
+        background-image: url('../img/logos/youtube.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
