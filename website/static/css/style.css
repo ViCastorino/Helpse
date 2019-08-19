@@ -13,7 +13,7 @@ body {
         'scdSection scdSection scdSection scdSection '
         'thdSection thdSection thdSection thdSection'
         'footer footer footer footer';
-    grid-template-rows: 10vh 90vh 90vh 50vh 90vh 35vh;
+    grid-template-rows: 10vh 90vh 90vh 60vh 90vh 35vh;
 }
 
 
@@ -259,9 +259,11 @@ section.projeto {
 
 /* --------------------------------------------- 2: SECTION CARROSEL --------------------------------------------- */
 
-section.carrossel {
+.carrossel {
     grid-area: scdSection;
-    background: #5243A9;
+    background-image: url('../img/background-carrousel.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 60vh; 
     display: flex;
     align-items: center;
     text-align: center;
@@ -269,13 +271,16 @@ section.carrossel {
     position: relative;
 }
 
-section.box-text {
+section .box-text {
     display: none;
+    background-color: transparent;
+   
 }
 
 .box-text h2 {
-    color: white;
-    font-size: 17px;
+    color: black;
+    text-shadow: 2px 2px white;
+    font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -283,17 +288,19 @@ section.box-text {
 
 .prev,
 .next {
+    background-color: transparent;
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     margin-top: -30px;
     padding: 16px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
+  
 }
 
 .next {
@@ -314,12 +321,12 @@ section.box-text {
 
 
 .navegation {
+    background-color: transparent;
     display: flex;
     position: absolute;
     transform: translate(-50%);
     left: 50%;
     bottom: 20px;
-
 }
 
 .dot {
@@ -335,6 +342,10 @@ section.box-text {
 .active,
 .dot:hover {
     background-color: #717171;
+}
+
+.video{
+    position: relative;
 }
 
 
