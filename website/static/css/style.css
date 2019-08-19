@@ -591,8 +591,8 @@ div.items img {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: #f6a3b7;
-        /* background: linear-gradient(to bottom right, #DFDCF2,#f3eff2); */
+        /* background-color: #f6a3b7; */
+        background: linear-gradient(to bottom right, #DFDCF2,#f3eff2);
     }
     
     .card{
