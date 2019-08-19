@@ -442,10 +442,16 @@ div.items img {
     border-radius: 10px;
     box-shadow: 0 0 0 5px #a32ea3;
     position: relative;
+    align-items: center;
 }
 
 .form-login {
+    flex-direction: column;
     background-color: #ffffff;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-items: center;
 }
 
 .btnfechar {
@@ -474,14 +480,19 @@ div.items img {
     transition: 0.5s;
     margin-top: 15px;
     cursor: pointer;
+    
 }
 
 
 /* coloca shadow nas caixas de texto */
 #modal input {
+    width: 300px;
     height: 30px;
     box-shadow: 1px 1px 1px 2px #3333333b;
     border-radius: 20px;
+}
+#modal {
+    align-content: center;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
@@ -591,8 +602,8 @@ div.items img {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        /* background-color:  #430755; */
-        background: linear-gradient(to bottom right, rgb(85, 11, 107),#6e1863);
+        /* background-color: #f6a3b7; */
+        background: linear-gradient(to bottom right, #DFDCF2,#f3eff2);
     }
     
     .card{

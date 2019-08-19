@@ -1,6 +1,6 @@
 main{
     width: 100vw;
-    height: 100vh;
+    height: 40vh;
     font-family:'Roboto Slab', serif;;
 
 }
@@ -31,6 +31,7 @@ main{
     background-color: #f3f3f363;
     text-align: center;
     padding: 60px;
+    height: 90vh;
 }
 .descricaosobre {
     padding-left: 45px;
