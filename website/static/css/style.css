@@ -13,7 +13,7 @@ body {
         'scdSection scdSection scdSection scdSection '
         'thdSection thdSection thdSection thdSection'
         'footer footer footer footer';
-    grid-template-rows: 10vh 90vh 40vh 50vh 90vh 40vh;
+    grid-template-rows: 10vh 90vh 90vh 50vh 90vh 40vh;
 }
 
 
@@ -50,6 +50,7 @@ nav {
     justify-content: space-around;
     color: rgb(19, 19, 19);
     background-color: #EAE6FF;
+
 }
 
 /* Aqui ficam os li */
@@ -216,12 +217,44 @@ header input[type=submit] {
 
 section.projeto {
     grid-area: fstSection;
-    background: white;
     display: flex;
-    align-items: center;
+    margin: 10px;
     text-align: center;
-    justify-content: center;
-    position: relative;
+    justify-content: space-around;
+}
+.projeto-container{
+    display: flex;
+    justify-content: space-around;
+}
+.img{
+    margin: 40px;
+    margin-left: 40px;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+}
+.txt-projeto{
+    margin: 40px;
+    margin-top: 80px;
+    margin-left: 580px;
+    text-align: left;
+    font-size: 15pt;
+}
+.projeto p{
+    color: black;
+    background: transparent;
+
+}
+.cadastrobtn{
+    background: #9D5BB2;
+    background: linear-gradient(to bottom right, #9D5BB2,#f58653);
+    color: white;
+    border-radius: 35px;
+    transition: 0.5s;
+    width: 150px;
+    height: 40px;
+    font-size: 14pt;
+    margin-left: 500px;
 }
 
 /* --------------------------------------------- 2: SECTION CARROSEL --------------------------------------------- */
@@ -547,7 +580,7 @@ div.items img {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: #3d3d3d;
+        background-color:
     }
     
     .card{
@@ -633,7 +666,6 @@ div.items img {
     }
     .organizar p{
         margin: 0;
-        font-family: 'Roboto Slab', serif;
         font-size: 20px;
         font-weight: bold;
     }

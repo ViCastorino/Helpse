@@ -5,7 +5,6 @@
 
 <body>
     <script src="{% static 'js/scroll-suave.js' %}" defer></script>
-
     <nav>
         <span class="logo"> logo bonitão </span>
         <ul>
@@ -30,6 +29,7 @@
             {% endif %}
         </ul>
     </nav>
+
 
     <header>
         <div class="info-content">
@@ -98,12 +98,21 @@
 
     <!--------------------------------- 1: SECTION SOBRE O PROJETO -------------------------------------------->
     <section class="projeto">
-        <p> O ' nome do nosso projeto' foi criado com o intuito de auxiliar jovens com disturbíos de depressão e
-            ansiedade a procurarem tratamento de forma prática e simples. Por meio dela, poderemos aproximar jovens com
-            instituições e consultórios que os auxiliarão em um tratamento adequado.
 
-        </p>
-
+        <div projeto-container>
+            <div class="img"><img src="../static/img/choice.png" alt=""></div>
+            <div class="txt-projeto">
+                <h1>Help</h1>
+                <p> O ' nome do nosso projeto' foi criado com o intuito de auxiliar jovens com disturbíos de depressão e
+                    ansiedade a procurarem tratamento de forma prática e simples. </p>
+                <p>Por meio dela, poderemos aproximar
+                    jovens
+                    com
+                    instituições e consultórios que os auxiliarão em um tratamento adequado.
+                </p>
+            </div>
+            <a href="cadastro"><button class="cadastrobtn">Faça Parte</button></a>
+        </div>
     </section>
 
 
@@ -202,7 +211,7 @@
         <div class="organizar">
             <div class="card">
 
-                <img src="/static/img/logo.jpg" alt="">
+                <img src="" alt="">
 
                 <p> Contato: </p>
                 <h1>Telefone: (11) 1234-4321</h1>
