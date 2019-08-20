@@ -38,7 +38,7 @@ span.logo {
 
 h1,
 h2,
-h3 {
+h3{
     font-family: 'Roboto Slab', serif;
     color: #3A1A53;
 }
@@ -92,8 +92,8 @@ nav li:hover {
     background: #9D5BB2;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     color: white;
-    border-radius: 2px;
-    transition: 2s;
+    border-radius: 40px;
+    transition: 1s;
 }
 
 
@@ -101,6 +101,7 @@ nav li:hover {
 .primary:hover,
 .secondary:hover {
     background: linear-gradient(to bottom right,  #EF698C , #9D5BB2);
+    transform: scale(1.1);
 }
 
 
