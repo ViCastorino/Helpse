@@ -1,12 +1,11 @@
 {% extends 'shared/layout.html' %}
-
 {% load static %}
 {% block conteudo %}
 
 <body>
     <script src="{% static 'js/scroll-suave.js' %}" defer></script>
     <nav>
-        <span class="logo"> help! </span>
+        <span class="logo"> help.se </span>
         <ul>
             <li><a id="link-inicio" href="/"> Home </a> </li>
             <li><a id="link-projeto"> O projeto</a> </li>
@@ -17,8 +16,8 @@
 
             {% if logado %}
             <div class="buttons">
-                <a href="perfil"><button class="primary">atualize seus dados</button></a>
-                <button id="btn-sair" class="btn-sair secondary">sair</button>
+                <a href="perfil"><button class="primary">Perfil</button></a>
+                <button id="btn-sair" class="btn-sair secondary">Sair</button>
             </div>
 
             {% else %}
