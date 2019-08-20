@@ -30,12 +30,17 @@ main{
 
 
 /* formatar logo aqui */
-span.logo {
-    font-family: 'Comfortaa', cursive;
+.logo{
+    /* font-family: 'Comfortaa', cursive;
     font-weight: 600;
-    letter-spacing:2px;
+    letter-spacing:2px; */
+    width: 120px;
+    height: 100px;
 }
-
+.logofooter{
+    width: 130px;
+    height: 110px;
+}
 h1,
 h2,
 h3{
@@ -552,9 +557,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #2d3436;
-    background: linear-gradient(to bottom right, #2d3436, #0f0f0f);
-
+    /* background-color: #2d3436;
+    background: linear-gradient(to bottom right, #2d3436, #0f0f0f); */
+    background-color: #EAE6FF;
 }
 
 
@@ -636,11 +641,12 @@ footer {
 
 footer ul{
     text-align: center;
-    color: #fff;
+    color: black;
 
 }
 footer h3 {
-    color:#BFB5F1;
+    /* color:#BFB5F1; */
+    color: black;
 }
 
 
@@ -656,7 +662,10 @@ footer h3 {
             'footer footer footer footer';
     }
 
-
+    .logo{
+        width: 90px;
+        height: 70px;
+    }
     .resultados{
         height: 100vh;
     }
