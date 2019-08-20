@@ -1,25 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 
 body {
     background-color: #fff;
-    background-color: white;
-    display: grid;
     font-family: 'Roboto', sans-serif;
     font-size: 16pt;
-    grid-template-areas: 'nav nav nav nav'
-        'header header header header '
-        'fstSection fstSection fstSection fstSection'
+    letter-spacing:1.5px;
+    overflow-x: hidden;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    letter-spacing:1.5px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    'header header header header '
+    'fstSection fstSection fstSection fstSection'
         'scdSection scdSection scdSection scdSection '
         'thdSection thdSection thdSection thdSection'
         'footer footer footer footer';
-    grid-template-rows: 10vh 90vh 90vh 60vh 100vh 35vh;
+        grid-template-rows:  100vh 90vh 60vh 100vh 35vh;
+
 }
 
 
 
 /* formatar logo aqui */
 span.logo {
-    font-family: cursive;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    letter-spacing:2px;
 }
 
 h1,
@@ -39,12 +53,15 @@ h1 {
 }
 
 input {
-    outline-color: #FF5C5A;
+    outline-color: rgba(0, 0, 0, 0);
 }
 
 /* -----------------------------------------------------------NAV----------------------------------------------------- */
 nav {
     align-items: center;
+    position:fixed;
+    width:100%;
+    z-index:9999;
     display: flex;
     grid-area: nav;
     justify-content: space-around;
@@ -63,7 +80,7 @@ nav ul {
 
 nav li:hover {
     transition: 0.5s;
-    color: #ff6b6b;
+    color: #903A64;
     cursor: pointer;
     background-color: transparent;
 }
@@ -123,7 +140,7 @@ header div.input-container {
 }
 
 .resultados {
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -447,16 +464,15 @@ div.items img {
 
 .login {
     animation-name: animation;
-    animation-duration: 2s;
+    animation-duration: 1s;
     background-color: white;
     font-family: sans-serif;
     color: #3a1a53;
     width: 35%;
     min-width: 300px;
     padding: 40px;
-    border: 0px solid #9D5BB2;
     border-radius: 10px;
-    box-shadow: 0 0 0 5px #a32ea3;
+    box-shadow: 0 0 0 5px #3a1a53;
     position: relative;
     align-items: center;
 }
@@ -472,19 +488,17 @@ div.items img {
 
 .btnfechar {
     position: absolute;
+    border-radius: 0 5px 0 0 ;
     font-size: 1.2rem;
     width: auto;
-    right: -3px;
+    right: 0px;
     height: 35px;
-    top: -3px;
-    border-radius: 5px;
-    border: 1px solid #a32ea3;
+    top: 0px;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     font-family: 'Varela Round', sans-serif;
     color: white;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
 }
 
 .entrarbtn {
@@ -504,8 +518,9 @@ div.items img {
 #modal input {
     width: 300px;
     height: 30px;
+    background-color:#fff;
     box-shadow: 1px 1px 1px 2px #3333333b;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #modal {
