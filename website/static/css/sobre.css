@@ -37,12 +37,12 @@ img.logos:hover{
     bottom: 0;
     width: 120px;
 }
- .pessoa h4,h5{
+.pessoa h4,h5{
      color:#3A1A53;
  }
 .pessoa p{
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 .sobreNos{
     display: flex;
