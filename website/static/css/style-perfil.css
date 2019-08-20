@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+
+
 *{
     padding: 0;
     margin: 0;
+    border: none;
+}
+
+input:hover , button:hover{
+  
+  cursor: pointer;
+}
+
+h1{
+  font-family: 'Roboto Slab', serif;
 }
 html{
     height: 100%;
@@ -11,7 +26,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Roboto', sans-serif;
  
   
 }
@@ -43,7 +58,7 @@ section{
     flex-direction: column;
     /* border-radius: 10px; */
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 40px;
     margin-top: 100px;
 }
@@ -90,6 +105,7 @@ section{
     border-radius: 5px;
 }
 .inform:hover{
+  transition: 1s;
     background: linear-gradient(#9D5BB2, #EF698C);
     color: white;
 }
@@ -150,6 +166,8 @@ section{
     font-size: 20px;
 }
 .botoes button:hover{
+  transition: 1s;
+
     background: linear-gradient(#9D5BB2, #EF698C);
     color: white;
 }
@@ -158,6 +176,8 @@ section{
   color: black;
 }
 .botoes a:hover{
+  transition: 1s;
+
   color: #ffff;
 } 
 
@@ -171,7 +191,7 @@ ul {list-style-type: none;}
   /* background: palevioletred; */
   background: linear-gradient(#9D5BB2, #EF698C);
   text-align: center;
-  font-family: Verdana, sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 /* Month list */
@@ -373,7 +393,7 @@ ul {list-style-type: none;}
   /* background: palevioletred; */
   background: linear-gradient(#9D5BB2, #EF698C);
   text-align: center;
-  font-family: Verdana, sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 /* Month list */
@@ -444,42 +464,4 @@ ul {list-style-type: none;}
     background: turquoise;
     color: white !important
   }
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
