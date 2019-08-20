@@ -92,22 +92,22 @@ nav li:hover {
     background: #9D5BB2;
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     color: white;
-    border-radius: 35px;
-    transition: 0.5s;
+    border-radius: 2px;
+    transition: 2s;
 }
 
 
 
 .primary:hover,
 .secondary:hover {
-    transform: scale(1.1);
+    background: linear-gradient(to bottom right,  #EF698C , #9D5BB2);
 }
 
 
 button,
 input[type=submit] {
     font-weight: bold;
-    padding: 0 25px;
+    padding: 5px 25px;
     cursor: pointer;
     outline: none;
     background-color: inherit;

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 * {
     border: none;
 }
@@ -6,7 +9,7 @@ html{
 }
 body{
     /*background-color: #3d3d3d; */
-    /*font-family: sans-serif; */
+    font-family: 'Roboto';
     margin: 0;
     padding: 0;
     background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
@@ -49,7 +52,7 @@ label {
 }
 
 h2{
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-size: 1.4rem;
     color: #3a1a53;
 }
@@ -57,17 +60,21 @@ h2{
 
 input, option, select{
     height: 30px;
-    box-shadow: 1px 1px 1px 2px #3333333b; 
+    box-shadow: 1px 1px 1px 1px #33333323; 
  
 }
 
 /*---- style do botao de cadastro -----*/
 
+input{
+
+}
+
 .button{
     background: linear-gradient(to bottom right, #9D5BB2, #EF698C);
     font-family: 'Varela Round', sans-serif;
     color: white;
-    border-radius: 35px;
+    border-radius: 5px;
     transition: 0.5s;
     margin-top: 15px;
     cursor: pointer;
@@ -119,7 +126,7 @@ input, option, select{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .caixa {
     width: 160px;
