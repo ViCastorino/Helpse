@@ -23,7 +23,7 @@ main{
         'scdSection scdSection scdSection scdSection '
         'thdSection thdSection thdSection thdSection'
         'footer footer footer footer';
-        grid-template-rows:  100vh 90vh 60vh 100vh 35vh;
+        grid-template-rows:  100vh 70vh 60vh 100vh 35vh;
 
 }
 
@@ -58,16 +58,33 @@ input {
 
 /* -----------------------------------------------------------NAV----------------------------------------------------- */
 nav {
-    align-items: center;
     position:fixed;
     width:100%;
     z-index:9999;
     display: flex;
     grid-area: nav;
+    align-items: center;
     justify-content: space-around;
+    
     color: rgb(19, 19, 19);
     background-color: #EAE6FF;
 
+}
+
+.menu-button{
+    height: 8vh;
+    width: 7vw;
+}
+
+.nav-icon{
+    display: none;
+}
+
+.menu-button .line{
+    display: block;
+    margin-bottom: 5px;
+    height: 5px;
+    background-color: #0f0f0f;
 }
 
 /* Aqui ficam os li */
@@ -235,7 +252,7 @@ header input[type=submit] {
 } */
 /* ----------------------------------------- 1: SECTION SOBRE A PLATAFORMA --------------------------------------- */
 
-section.projeto {
+section.projeto-section {
     grid-area: fstSection;
     display: flex;
     margin: 10px;
@@ -246,6 +263,7 @@ section.projeto {
 .projeto-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .img {
@@ -279,7 +297,6 @@ section.projeto {
     width: 150px;
     height: 40px;
     font-size: 14pt;
-    margin-left: 500px;
 }
 
 /* --------------------------------------------- 2: SECTION CARROSEL --------------------------------------------- */
@@ -287,7 +304,7 @@ section.projeto {
 .carrossel {
     grid-area: scdSection;
     background-image: url('../img/gif2.gif');
-    background-opacity: 0.5;
+
     background-repeat: no-repeat;
     background-size: 100% 60vh;
     display: flex;
@@ -358,7 +375,7 @@ section .box-text {
     position: absolute;
     transform: translate(-50%);
     left: 50%;
-    bottom: 20px;
+    bottom: 5px;
 }
 
 .dot {
@@ -529,109 +546,6 @@ div.items img {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------- */
-
-
-
-@media(max-width: 760px) {
-    body {
-        font-size: 1.4rem;
-        grid-template-rows: 15vh 60vh 150vh auto auto auto auto;
-        grid-template-areas: 'nav nav nav nav'
-            'header header header header '
-            'fstSection fstSection fstSection fstSection'
-            'scdSection scdSection scdSection scdSection '
-            'thdSection thdSection thdSection thdSection'
-            'registrar registrar registrar registrar '
-            'footer footer footer footer';
-    }
-
-    nav a {
-        display: none;
-    }
-
-    header .info-content {
-        align-items: center;
-    }
-
-    header p {
-        text-align: center;
-    }
-
-
-    /* ------------------------- */
-
-    section.sobre {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-    }
-
-    section.sobre .sobre-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-    }
-
-    div.items {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 60%;
-    }
-
-    div.items img {
-        padding: 15px;
-        border-radius: 40px;
-    }
-
-    /* ----------------------------------------------------------------- */
-
-    section.carrossel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 5% 0;
-    }
-
-    .carrossel p {
-        width: 100%;
-    }
-
-    .carrossel.form {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .carrossel input {
-        text-align: center;
-        padding: 0;
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        display: block;
-    }
-
-    iframe {
-        margin-top: 5%;
-    }
-
-    .carrossel button {
-        margin: 0;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-        display: block;
-    }
-
-    /* ============================================================================= */
-}
-
-
-
-
 /* ----------------------footer------------------------------------------- */
 footer {
     grid-area: footer;
@@ -640,13 +554,13 @@ footer {
     justify-content: space-around;
     background-color: #2d3436;
     background: linear-gradient(to bottom right, #2d3436, #0f0f0f);
+
 }
 
 
 
 .links {
-    width: 760px;
-    height: 32vh;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -712,20 +626,162 @@ footer {
     background-size: cover;
 }
 
-.organizar {
-    height: 35vh;
+footer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 
 
-.organizar ul{
-    text-align: left;
+footer ul{
+    text-align: center;
     color: #fff;
 
 }
-.organizar h3 {
+footer h3 {
     color:#BFB5F1;
+}
+
+
+@media(max-width: 760px) {
+    main {
+        font-size: 1.4rem;
+        grid-template-rows: 80vh 80vh 80vh auto auto 70vh;
+        grid-template-areas:             'header header header header '
+            'fstSection fstSection fstSection fstSection'
+            'scdSection scdSection scdSection scdSection '
+            'thdSection thdSection thdSection thdSection'
+            'registrar registrar registrar registrar '
+            'footer footer footer footer';
+    }
+
+
+    .resultados{
+        height: 100vh;
+    }
+
+    nav ul , nav li , nav button {
+        display: none;
+    }
+
+    nav{height: 10vh;}
+
+    .nav-icon{
+        display: block;
+    }
+
+
+    header{
+        background-image: none;
+        background-color: #EAE6FF;
+    }
+
+    header .input-container{
+        flex-direction: column;
+    }    
+    
+    header .info-content {
+        justify-content: baseline;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header p {
+        text-align: center;
+    }
+
+
+    .projeto .img{ display:none;}
+
+    .projeto{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .txt-projeto{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    /* ------------------------- */
+
+    section.sobre {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    section.sobre .sobre-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    div.items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    div.items img {
+        padding: 15px;
+        border-radius: 40px;
+    }
+
+    /* ----------------------------------------------------------------- */
+
+    section.carrossel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5% 0;
+        
+    }
+    
+    .links , .Redes{
+        width: 80%;
+    }
+
+    .carrossel h2{
+        font-size: 22pt;
+    }
+    .carrossel.form {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carrossel input {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        display: block;
+    }
+
+    iframe {
+        margin-top: 5%;
+    }
+
+    .carrossel button {
+        margin: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        display: block;
+    }
+
+    /* ============================================================================= */
+    footer{
+        flex-direction: column;
+    }
 }
