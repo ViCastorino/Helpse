@@ -106,6 +106,10 @@ html, body{
     display: none;
     font-size: 15px;
 }
+#resposta3{
+    display: none;
+    font-size: 15px;
+}
 
 @media (max-width: 650px){
     

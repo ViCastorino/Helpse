@@ -60,12 +60,11 @@ function loadNextQuestion () {
     if(score1>score2>score3){
         resposta1.style.display = 'block';
     }else if(score2>score1<score3){
-        resultCont.textContent = 'Até que ta sussa';
+        resposta1.style.display = 'block';
     }else if(score2>score3<score1){
-        resultCont.textContent = 'Sem neurose';
+        resposta3.style.display = 'block';
     }else if(score3>score2>score1){
-        resultCont.textContent = 'A coisa ta feia bro';
-        resposta.style.display = block;
+        resposta2.style.display = 'block';
     }else if(score3>score1>score2){
         resposta2.style.display = 'block';
     }
