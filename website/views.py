@@ -11,6 +11,13 @@ def sobre(request):
      contexto= {}
      return render( request, 'sobre.html', contexto)
 
+def perfil(request):
+     contexto= {}
+     return render( request, 'perfil.html', contexto)
+
+def quiz(request):
+     contexto= {}
+     return render( request, 'quiz.html', contexto)
 
 def busca_localidade(request):
      # pega o valor digitado no input e filtra se tem algo parecido nas propriedades da classe Instituicao

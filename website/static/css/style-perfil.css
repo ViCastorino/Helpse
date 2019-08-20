@@ -1,0 +1,485 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lexend Deca', sans-serif;
+ 
+  
+}
+section{
+    /* width: 100%; */
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'left right right'
+                         'left right right'
+                         'left right right';
+    grid-template-rows: 28vh 28vh 28vh;
+    grid-template-columns: 69.5vh 69.2vh 69.2vh; 
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/static/img/maos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: sepia(23%);
+}
+.left{
+    grid-area: left;
+    width: 360px;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: steelblue;
+    flex-direction: column;
+    /* border-radius: 10px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+.right{
+    grid-area: right;
+    width: 850px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: steelblue;
+    /* background: linear-gradient(#9D5BB2, #EF698C); */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.right h1{
+    color: #ffff;
+    font-size: 30px;
+}
+
+.perfil{
+    width: 180px;
+    height: 180px;    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.perfil h1{
+    color: #ffff;
+    font-size: 30px;
+}
+.inform{
+    width: 320px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 5px;
+}
+.inform:hover{
+    background: linear-gradient(#9D5BB2, #EF698C);
+    color: white;
+}
+.consultas{
+    width: 320px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dados{
+    width: 320px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+}
+.about{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+.escolha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 620px;
+    height: 150px;
+}
+.escolha h3{
+    color: #ffff;
+    font-size: 20px
+}
+.escolha h2{
+    font-size: 30px;
+    color: #ffff;
+}
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 70px;
+}
+.botoes button{
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.botoes button:hover{
+    background: linear-gradient(#9D5BB2, #EF698C);
+    color: white;
+}
+.botoes a{
+  text-decoration: none;
+  color: black;
+}
+.botoes a:hover{
+  color: #ffff;
+} 
+
+/* Calender Style */
+ul {list-style-type: none;}
+
+/* Month header */
+.month {
+  padding: 0px 25px;
+  width: 90%;
+  /* background: palevioletred; */
+  background: linear-gradient(#9D5BB2, #EF698C);
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  width: 501px;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 67.5px;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.5%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: palevioletred;
+  color: white !important
+}
+.days li .active2 {
+    padding: 5px;
+    background: turquoise;
+    color: white !important
+  }
+
+/* Responsividade */
+
+@media (max-width: 650px){
+    section{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 1250px;
+        display: grid;
+        grid-template-areas: 'left left'
+                             'left left'
+                             'right right'
+                             'right right';
+        grid-template-rows: 40vh 40vh 40vh 40vh;
+        grid-template-columns: 35vh 35vh; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .right{
+        display: flex;
+        grid-area: right;
+        width: 80%;
+        height: 370px;
+        margin-left: 40px;
+        margin-top: 0px;
+    }
+    .right h1{
+        font-size: 20px;
+    }
+    .left{
+        display: flex;
+        grid-area: left;
+        width: 80%;
+        height: 340px;
+        margin-left: 40px;
+        margin-top: 250px;
+    }
+
+    .perfil{
+        width: 300px;
+        height: 130px;    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .perfil h1{
+        color: #ffff;
+        font-size: 25px;
+    }
+    .inform{
+        width: 240px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    .consultas{
+        width: 320px;
+        height: 35px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dados{
+        width: 320px;
+        height: 35px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .about{
+        width: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .escolha{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 420px;
+        height: 140px;
+    }
+    .escolha h3{
+        color: #ffff;
+        font-size: 20px
+    }
+    .escolha h2{
+        font-size: 20px;
+        color: #ffff;
+    }
+    .botoes{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 500px;
+        height: 70px;
+    }
+    .botoes button{
+        width: 120px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: #ffff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+
+
+/* Calender Style Responsivo*/
+ul {list-style-type: none;}
+
+/* Month header */
+.month {
+  padding: 0px 25px;
+  width: 250px;
+  /* background: palevioletred; */
+  background: linear-gradient(#9D5BB2, #EF698C);
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 5px 0;
+  width: 300px;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 37.5px;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+  width: 300px;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 11.5%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: palevioletred;
+  color: white !important
+}
+.days li .active2 {
+    padding: 5px;
+    background: turquoise;
+    color: white !important
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

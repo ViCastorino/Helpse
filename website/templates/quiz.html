@@ -1,0 +1,26 @@
+{% extends 'shared/layout-quiz.html' %}
+
+{% block conteudo %}
+
+
+<div class="tela"></div>
+<div class="container" id="quizContainer">
+    <div class="titulo">Cuidados da Mente</div>
+    <div class="question" id="question"></div>
+    <label class="opcao"> <input type="radio" name="opcao" value="1"> <span id="opt1"></span> </label>
+    <label class="opcao"> <input type="radio" name="opcao" value="2"> <span id="opt2"></span> </label>
+    <label class="opcao"> <input type="radio" name="opcao" value="3"> <span id="opt3"></span> </label>
+    <button id="nextbutton" class="nextbtn" onclick="loadNextQuestion();"> Próxima </button>
+</div>    
+<div id="result" class="container result" style="display: none;">
+    <p id="resposta1"> Embora em algumas situações esteja mais ansioso(a) do que o normal, sua resposta frente a situações de ansiedade é adequada, mas se quiser um feedback profissional, verá a seguir uma chance de confirmar se estes indícios são reais.</p>
+    <p id="resposta2">Embora em algumas situações esteja mais ansioso(a) do que o normal, sua resposta frente a situações de ansiedade apresentam alguns indícios deste problema. Para ter um controle de ansiedade é importante reconhecer quando aumentam nossos níveis de estímulos, ter uma vida saudável e aprender a priorizar as coisas importantes da vida. Para uma avaliação profissional, encontrará a seguir uma oportunidade de confirmar se estes indícios de ansiedade são reais.</p>
+    <a href="templates/index.html">Voltar</a>
+</div>
+<script src="/static/js/question.js"></script>
+<script src="/static/js/quiz-sc.js"></script>
+
+
+
+
+{% endblock %}

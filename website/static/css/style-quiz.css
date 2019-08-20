@@ -1,0 +1,192 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Volkhov', cursive;
+    background: url("/static/img/psicohelp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.tela{
+    background-color: palevioletred;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.container{
+    height: 350px;
+    width: 1200px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    /* transform: translateX(10%) translateY(15%); */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 0 8px 3px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #08038C;
+}
+.question{
+    width: 800px;
+    padding: 20px;
+    font-size: 22px;
+    background: #08038C;
+    border-radius: 20px;
+    margin: 10px 0 10px 0;
+    color: #f6f6f6f6;
+    /* color: black; */
+}
+.opcao{
+    width: 470px;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.5);
+    /* background: #0000; */
+    margin: 10px 0 10px 10px;
+    color: black;
+    border-radius: 20px;
+}
+.opcao:hover{
+    background: #08038C;
+    color: #f6f6f6;
+}
+
+.nextbtn{
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.nextbtn:hover{
+    background: #08038C;
+    color: #f6f6f6;
+}
+
+.result{
+    height: 100px;
+    text-align: center;
+    font-size: 75px;
+}
+
+.opcao input:checked .opcao{
+    background: #08038C;
+    color: #0000;
+}
+
+#resposta1{
+    display: none;
+    font-size: 15px;
+}
+#resposta2{
+    display: none;
+    font-size: 15px;
+}
+
+@media (max-width: 650px){
+    
+.container{
+    height: 350px;
+    width: 450px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    /* transform: translateX(10%) translateY(15%); */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 0 8px 3px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #08038C;
+}
+.question{
+    width: 350px;
+    padding: 15px;
+    background: #08038C;
+    border-radius: 20px;
+    margin: 10px 0 10px 0;
+    color: #f6f6f6f6;
+    font-size: 17px;
+}
+.opcao{
+    width: 330px;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.5);
+    /* background: #0000; */
+    margin: 10px 0 10px 10px;
+    color: black;
+    border-radius: 20px;
+}
+.opcao:hover{
+    background: #08038C;
+    color: #f6f6f6;
+}
+
+.nextbtn{
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.nextbtn:hover{
+    background: #08038C;
+    color: #f6f6f6;
+}
+
+.result{
+    height: 100px;
+    text-align: center;
+    font-size: 75px;
+}
+
+.opcao input:checked .opcao{
+    background: #08038C;
+    color: #0000;
+}
+
+#resposta{
+    display: none;
+}
+}
