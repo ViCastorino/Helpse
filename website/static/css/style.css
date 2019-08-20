@@ -592,7 +592,7 @@ div.items img {
     section.carrossel {
         display: flex;
         justify-content: center;
-        align-itemns: center;
+        align-items: center;
         flex-direction: column;
         padding: 5% 0;
     }
