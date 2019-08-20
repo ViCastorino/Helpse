@@ -5,7 +5,7 @@
 <body>
     <script src="{% static 'js/scroll-suave.js' %}" defer></script>
     <nav>
-        <span class="logo"> help.se </span>
+        <a href="/"> <span class="logo"> help.se </span> </a>
         <ul>
             <li><a id="link-inicio" href="/"> Home </a> </li>
             <li><a id="link-projeto"> O projeto</a> </li>
@@ -27,10 +27,21 @@
             </div>
             {% endif %}
         </ul>
+        <!-- --------------------------------------BOTOES DA NAV RESPONSIVA -->
+        <div class="pesquisa nav-icon">
+            <a href="#header">
+                <img class="" draggable="false" src="{% static 'img/search.svg' %}" alt="">
+             </a>
+        </div>
+        <div class="menu-button nav-icon" id="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
     </nav>
     <main>
 
-        <header>
+        <header id="header">
             <div class="info-content">
                 <h1>Encontre a solução para seus problemas aqui {{instituicao}} </h1>
                 <p>{{msg}} </p>
@@ -96,10 +107,9 @@
 
 
         <!--------------------------------- 1: SECTION SOBRE O PROJETO -------------------------------------------->
-        <section class="projeto">
+        <section class="projeto-section">
 
-
-            <div projeto-container>
+            <div class="projeto">
                 <div class="img"><img src="../static/img/choice.png" alt=""></div>
                 <div class="txt-projeto">
                     <h1>Help.se</h1>
@@ -111,8 +121,8 @@
                         com
                         instituições e consultórios que os auxiliarão em um tratamento adequado.
                     </p>
+                    <a href="cadastro"><button class="cadastrobtn">Faça Parte</button></a>
                 </div>
-                <a href="cadastro"><button class="cadastrobtn">Faça Parte</button></a>
             </div>
         </section>
 
@@ -140,9 +150,12 @@
             </div>
 
             <div class="box-text">
-                <h2>Professores da UFRN citam uma série de fatores de risco
+                <!-- <h2>Professores da UFRN citam uma série de fatores de risco
                     que deixam os estudantes vulneráveis à depressão, como distância de casa, dificuldades financeiras e
-                    principalmente a pressão. E que 5% desses jovens declararam a tentativa de suicídio.
+                    principalmente a pressão. E que 5% desses jovens declararam a tentativa de suicídio. -->
+                <h2>Estudos da UFRN citam fatores de risco
+                    que deixam os estudantes vulneráveis à depressão, como distância de casa, dificuldades financeiras e
+                    principalmente a pressão. 5% desses jovens declararam tentativa de suicídio.</h2>
                 </h2>
 
             </div>
@@ -213,30 +226,26 @@
         <!------------------------------- 4: FOOTER --------------------------------------->
 
         <footer>
-            <div class="organizar">
-                <div class="footer-container">
-                    <ul>
-                        <h3>Help.me</h3>
-                        <li><a id="link-projeto" href="/"> O projeto</a> </li>
-                        <li><a id="link-carrossel" href="/"> Curiosidades </a> </li>
-                        <li><a id="link-beneficio" href="/"> Benefícios </a> </li>
-                        <li><a id="link-sobre" href="/sobre"> O time </a> </li>
-                    </ul>
-                </div>
-                <div class="links">
-                    <h3> Fique por dentro de tudo que acontece por aqui</h3>
-                    <div class="Redes">
-                        <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
-                        <a class="balltwt" href="https://www.linkedin.com" target="_blank" id="twt"></a>
-                        <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
-                        <a class="ballyt" href="https://www.youtube.com" target="_blank" id="youtube"> </a>
-                    </div>
 
-
-                </div>
+            <div class="footer-container">
+                <ul>
+                    <h3>Help.me</h3>
+                    <li><a id="link-projeto" href="/"> O projeto</a> </li>
+                    <li><a id="link-carrossel" href="/"> Curiosidades </a> </li>
+                    <li><a id="link-beneficio" href="/"> Benefícios </a> </li>
+                    <li><a id="link-sobre" href="/sobre"> O time </a> </li>
+                </ul>
             </div>
 
-
+            <div class="links">
+                <h3> Fique por dentro de tudo que acontece por aqui</h3>
+                <div class="Redes">
+                    <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
+                    <a class="balltwt" href="https://www.linkedin.com" target="_blank" id="twt"></a>
+                    <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
+                    <a class="ballyt" href="https://www.youtube.com" target="_blank" id="youtube"> </a>
+                </div>
+            </div>
         </footer>
 
 
