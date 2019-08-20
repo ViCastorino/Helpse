@@ -3,13 +3,13 @@
 {% block conteudo %}
 <main>
     <nav>
-        <span class="logo"> logo bonitão </span>
+        <span class="logo"> Help! </span>
         <ul>
             <li><a id="link-inicio" href="/"> Home </a> </li>
             <li><a id="link-projeto" href="/"> O projeto</a> </li>
             <li><a id="link-carrossel" href="/"> Curiosidades </a> </li>
             <li><a id="link-beneficio" href="/"> Benefícios </a> </li>
-            <li><a id="link-sobre" href="/sobre"> Quem somos </a> </li>
+           <li><a id="link-sobre" href="/sobre"> Equipe </a> </li>
 
 
             {% if logado %}
@@ -40,54 +40,63 @@
                 <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
             </div>
             <div class="pessoa">
-                <img class="circle" src="#">
+                <img class="circle" src="./static/img/pessoa/barbara.jpg">
                 <h4>Barbára Moreira </h4>
                 <h5>18 anos</h5>
-                <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
-                <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+                <p><a href="https://www.linkedin.com/in/bárbara-moreira-683880188/"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Barbára Moreira</p>
+                <p><a href="https://github.com/BabiMoreira"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> BabiMoreira</p>
             </div>
             <div class="pessoa">
-                <img class="circle" src="#">
+                <img class="circle" src="./static/img/pessoa/looh.jpg">
                 <h4>Lorrany Hengles</h4>
                 <h5>18 anos</h5>
-                <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
-                <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+                <p><a href="https://www.linkedin.com/in/lorrany-hengles-332726159/"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Lorrany Hengles</p>
+                <p><a href="https://github.com/lorranyhengles"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> lorranyhengles</p>
             </div>
             <div class="pessoa">
-                <img class="circle" src="#">
-                <h4>Pedro</h4>
-                <h5>idade</h5>
-                <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
-                <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+                <img class="circle" src="./static/img/pessoa/pedro.jpg">
+                <h4>Pedro Rufino</h4>
+                <h5>19 anos</h5>
+                <p><a href="https://www.linkedin.com/in/pedrolopesrufino/"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Pedro Rufino</p>
+                <p><a href="https://github.com/pedrorufino"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> pedrorufino </p>
             </div>
-            <div>
-                <img class="circle" src="#">
+            <div class="pessoa">
+                <img class="circle" src='./static/img/pessoa/vitor.jpg'>
                 <h4>Vitor Castorino</h4>
-                <h5> idade</h5>
-                <p><a href="#"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Linkedin</p>
-                <p><a href="#"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> Github</p>
+                <h5> 22 anos</h5>
+                <p><a href="https://www.linkedin.com/in/vitor-castorino-teodoro-329987118/"><img src="./static/img/logos/linkedin.png" alt="" class="logos"></a> Vitor Castorino Teodoro</p>
+                <p><a href="https://github.com/ViCastorino"><img src="./static/img/logos/github-logo.png" alt="" class="logos"></a> ViCastorino</p>
             </div>
         </div>
 
-        <footer>
-            <div class="organizar">
-           
         
+        <footer class="footer-sobre">
+            <div class="organizar">
+                <div class="footer-container">
+                    <ul>
+                        <h3>Help.se</h3>
+                        <li><a id="link-projeto" href="/"> O projeto</a> </li>
+                        <li><a id="link-carrossel" href="/"> Curiosidades </a> </li>
+                        <li><a id="link-beneficio" href="/"> Benefícios </a> </li>
+                        <li><a id="link-sobre" href="/sobre"> O time </a> </li>
+                    </ul>
+                </div>
                 <div class="links">
-                    <p>Fique por dentro de tudo que acontece por aqui</p>
+                    <h3> Fique por dentro de tudo que acontece por aqui</h3>
                     <div class="Redes">
                         <a class="ballfb" href="https://www.facebook.com/" target="_blank" id="fb"></a>
-                        <a class="balltwt" href="#" target="_blank" id="twt"></a>
+                        <a class="balltwt" href="https://www.linkedin.com" target="_blank" id="twt"></a>
                         <a class="ballinsta" href="https://www.instagram.com/" target="_blank" id="insta"> </a>
-                        <a class="ballyt" href="https://www.instagram.com/" target="_blank" id="youtube"> </a>
+                        <a class="ballyt" href="https://www.youtube.com" target="_blank" id="youtube"> </a>
                     </div>
-        
-        
+
+
                 </div>
             </div>
-            </div>
-        
+
+
         </footer>
+
 </main>
 
 {% endblock %}
