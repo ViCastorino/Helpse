@@ -103,6 +103,7 @@ section{
     font-weight: bold;
     font-size: 17px;
     border-radius: 5px;
+    text-decoration: none;
 }
 .inform:hover{
   transition: 1s;
