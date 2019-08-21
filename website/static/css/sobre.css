@@ -69,3 +69,6 @@ img.logos:hover{
 .footer-sobre{
     width: 100vw;
 }
+.organizar{
+    display: flex;
+}
