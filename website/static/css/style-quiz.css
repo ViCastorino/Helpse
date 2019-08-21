@@ -22,13 +22,13 @@ html, body{
 
 .container{
     height: 350px;
-    width: 1200px;
+    width: 1000px;
     position: absolute;
     top: 15%;
     left: 15%;
     /* transform: translateX(10%) translateY(15%); */
     background: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    padding: 15x;
     border: 1px solid #000;
     box-shadow: 0 0 8px 3px #fff;
     display: flex;
@@ -115,13 +115,13 @@ html, body{
     
 .container{
     height: 350px;
-    width: 450px;
+    width: 400px;
     position: absolute;
     top: 15%;
     left: 10%;
     /* transform: translateX(10%) translateY(15%); */
     background: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #000;
     box-shadow: 0 0 8px 3px #fff;
     display: flex;

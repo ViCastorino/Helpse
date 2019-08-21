@@ -71,4 +71,10 @@ img.logos:hover{
 }
 .organizar{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    width: 75px;
+    height: 65px;
 }
