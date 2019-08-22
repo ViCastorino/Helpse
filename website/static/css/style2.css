@@ -170,7 +170,7 @@ input{
 }
 
 
-@media(max-width: 760px) {
+@media(max-width: 730px) {
     form{
         height: 200vh;
         display: flex;
@@ -181,8 +181,18 @@ input{
 
     }
 
+#container{
+    flex-direction: column;
+}
+#first {
+    width: 100px;
+    height: 100px;
+}
 
-    
+#second {
+    width: 100px;
+    height: 100px;
+}
 #paciente ,  #instituicao {
     justify-content: center;
     top: 5%;

@@ -649,7 +649,7 @@ footer h3 {
 }
 
 
-@media(max-width: 760px) {
+@media(max-width: 700px) {
     main {
         font-size: 1.4rem;
         grid-template-rows: 80vh 80vh 80vh auto auto 70vh;
@@ -791,5 +791,11 @@ footer h3 {
     /* ============================================================================= */
     footer{
         flex-direction: column;
+    }
+    .footer-container{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

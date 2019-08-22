@@ -68,7 +68,10 @@ html, body{
     background: #08038C;
     color: #f6f6f6;
 }
-
+.btnvoltar{
+    font-size: 20px;
+    text-decoration: none;
+}
 .nextbtn{
     border: none;
     outline: none;
@@ -111,7 +114,7 @@ html, body{
     font-size: 15px;
 }
 
-@media (max-width: 650px){
+@media (max-width: 550px){
     
 .container{
     height: 350px;
@@ -161,6 +164,10 @@ html, body{
     color: #f6f6f6;
 }
 
+.btnvoltar{
+    font-size: 10px;
+    text-decoration: none;
+}
 .nextbtn{
     border: none;
     outline: none;

@@ -68,11 +68,14 @@ img.logos:hover{
 }
 .footer-sobre{
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .organizar{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .logo{
     width: 75px;
