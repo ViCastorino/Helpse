@@ -217,9 +217,6 @@ header .info-content {
     align-items: center;
     justify-content: space-around;
 }
-.info-content h1{
-    display: none;
-}
 
 /* ------------------------------------- BARRA DE PESQUISA ---------------------------------- */
 .search-bar {
