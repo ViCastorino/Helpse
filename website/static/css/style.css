@@ -202,7 +202,6 @@ span.column {
 .instituicao-container img {
     max-height: 70px;
     max-width: 70px;
-
 }
 
 
@@ -218,7 +217,9 @@ header .info-content {
     align-items: center;
     justify-content: space-around;
 }
-
+.info-content h1{
+    display: none;
+}
 
 /* ------------------------------------- BARRA DE PESQUISA ---------------------------------- */
 .search-bar {
